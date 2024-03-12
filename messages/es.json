@@ -1,0 +1,80 @@
+{
+  "Nav": {
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "about": "Sobre mi",
+    "title": "Menu"
+  },
+  "Header": {
+    "welcome": "Soy Fabio Estevez",
+    "rol": "Desarrollador Fullstack Web & Mobile",
+    "about": "Apasionado por el desarrollo y diseño."
+  },
+  "Skills": {
+    "title": "Habilidades"
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "cava": {
+      "title": "Cava Verdot",
+      "paragraph": "ecommerce de bebidas plasmando lo aprendido en el bootcamp  Henry de desarrollo web.",
+      "technologies": "React Redux CSS3 JavaScript Firebase Node Express JWT Sequelize PostgreSQL Stripe Cloudinary"
+    },
+    "sanatorio": {
+      "title": "Sanatorio Colegiales",
+      "paragraph": "Pagina web de presentación e información sobre el Sanatorio Colegiales ubicado en Argentina, Buenos Aires.",
+      "technologies": "Next JavaScript Sass Context"
+    },
+    "printec": {
+      "title": "Importaciones Printec",
+      "paragraph": "Una aplicación móvil para sistematizar la operación de un negocio de alquiler de impresoras.",
+      "technologies": "Expo Redux-Toolkit Tailwind Moti JavaScript Node Express JWT Sequelize PostgreSQL API-Google"
+    }
+  },
+  "Footer": {
+    "contact": "Contacto",
+    "social": "Redes Sociales",
+    "reserved": "Fabio Estevez. Todos los derecho reservados."
+  },
+  "Form": {
+    "content": {
+      "email": {
+        "text": "Correo Electrónico",
+        "placeholder": "correo@example.com"
+      },
+      "subject": {
+        "text": "Asunto",
+        "placeholder": "Asunto..."
+      },
+      "message": {
+        "text": "Mensaje",
+        "placeholder": "..."
+      }
+    },
+    "errors": {
+      "email": {
+        "invalid": "Ingresa un correo electrónico valido.",
+        "required": "El correo electrónico es obligatorio."
+      },
+      "subject": {
+        "required": "El asunto es obligatorio."
+      },
+      "message": {
+        "required": "El mensaje es obligatorio."
+      }
+    },
+    "server": {
+      "success": "Correo enviado satisfactoriamente.",
+      "bad": "Se ha producido un error. Por favor intenta nuevamente."
+    },
+    "actions": {
+      "button": "Enviar"
+    }
+  },
+  "About": {
+    "title": "Sobre Mi",
+    "description": "Soy un apasionado Desarrollador Full Stack con un enfoque especial en el frontend. Mi fascinación por la tecnología me ha llevado a explorar diversas áreas de la informática, desde la programación hasta la seguridad y los videojuegos.",
+    "paragraph": "Soy una persona dedicada y orientada a la resolución de problemas, con una sólida capacidad analítica y una habilidad excepcional para gestionar el tiempo de manera eficiente. Mi enfoque autodidacta me impulsa constantemente a buscar nuevas oportunidades para aprender y mejorar mis habilidades."
+  }
+}

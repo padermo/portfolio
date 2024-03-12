@@ -1,0 +1,80 @@
+{
+  "Nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "about": "About",
+    "title": "Menu"
+  },
+  "Header": {
+    "welcome": "I’m Fabio Estevez",
+    "rol": "Fullstack Web & Mobile Developer",
+    "about": "Passionate about development and design."
+  },
+  "Skills": {
+    "title": "Skills"
+  },
+  "Projects": {
+    "title": "Projects",
+    "cava": {
+      "title": "Cava Verdot",
+      "paragraph": "Liquor ecommerce applying what was learned in the Henry web development bootcamp.",
+      "technologies": "React Redux CSS3 JavaScript Firebase Node Express JWT Sequelize PostgreSQL Stripe Cloudinary"
+    },
+    "sanatorio": {
+      "title": "Sanatorio Colegiales",
+      "paragraph": "Presentation and information website about Sanatorio Colegiales located in Buenos Aires, Argentina.",
+      "technologies": "Next JavaScript Sass Context"
+    },
+    "printec": {
+      "title": "Importaciones Printec",
+      "paragraph": "A mobile application to systematize the operation of a printer rental business.",
+      "technologies": "Expo Redux-Toolkit Tailwind Moti JavaScript Node Express JWT Sequelize PostgreSQL API-Google"
+    }
+  },
+  "Footer": {
+    "contact": "Contact",
+    "social": "Social Networks",
+    "reserved": "Fabio Estevez. All rights reserved."
+  },
+  "Form": {
+    "content": {
+      "email": {
+        "text": "Email",
+        "placeholder": "email@example.com"
+      },
+      "subject": {
+        "text": "Subject",
+        "placeholder": "Subject..."
+      },
+      "message": {
+        "text": "Message",
+        "placeholder": "..."
+      }
+    },
+    "errors": {
+      "email": {
+        "invalid": "Enter a valid email address.",
+        "required": "Email is required."
+      },
+      "subject": {
+        "required": "Subject is required."
+      },
+      "message": {
+        "required": "Message is required."
+      }
+    },
+    "server": {
+      "success": "Email sent successfully.",
+      "bad": "An error occurred. Please try again."
+    },
+    "actions": {
+      "button": "Send"
+    }
+  },
+  "About": {
+    "title": "About",
+    "description": "Passionate Full Stack Developer with a special focus on frontend development. Fascinated by technology, I explore various areas of computer science, from programming to security and video games.",
+    "paragraph": "Dedicated individual with a problem-solving mindset, strong analytical ability, and exceptional skill for efficiently managing time. My self-taught approach constantly drives me to seek new opportunities to learn and enhance my skills."
+  }
+}
