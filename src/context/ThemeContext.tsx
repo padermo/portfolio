@@ -6,12 +6,7 @@ import type { Children, Theme } from '@/types/generals';
 export const ThemeContext = createContext({} as Theme)
 
 export default function ThemeProvider({children}:Children){
-  const [theme, setTheme] = useState<string>(()=>{
-    if (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches){
-      return 'dark'
-    }
-    return 'light'
-  });
+  const [theme, setTheme] = useState<string>('light');
 
   const cookieTheme = getCookie('theme')
 
