@@ -1,4 +1,4 @@
-'use client'
+
 import ViewMobile from './ViewMobile'
 import ViewDesktop from './ViewDesktop'
 

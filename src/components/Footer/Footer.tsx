@@ -1,4 +1,3 @@
-'use client'
 import { useTranslations } from 'next-intl'
 import Form from '../Forms/Form'
 import Contact from '../Contact/Contact'
