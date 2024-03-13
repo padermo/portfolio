@@ -6,6 +6,7 @@ import ConfigThemeAnt from '../ParentComponents/ConfigThemeAnt';
 import { useTranslations } from 'next-intl';
 import { useTheme } from '@/context/ThemeContext';
 import Lang from '../Lang/Lang';
+import Link from 'next/link';
 import SwitchTheme from '../config/SwitchTheme';
 import { useSearchParams } from 'next/navigation';
 
@@ -36,7 +37,7 @@ export default function ViewMobile(){
           onClose={handleViewDrawer}
           title={
             <div className='dark:text-white text-[#222]'>
-              <label>{t('title')}</label>
+              <label className='font-light text-lg'>{t('title')}</label>
             </div>
           }
           footer={
@@ -46,9 +47,9 @@ export default function ViewMobile(){
             </div>
           }
         >
-          <p>{t('about')}</p>
-          <p>{t('projects')}</p>
-          <p>{t('contact')}</p>
+          <Link href={'#about'} onClick={handleViewDrawer} className='block tracking-wider hover:text-[#CFB53B] active:text-[#CFB53B]'>{t('about')}</Link>
+          <Link href={'#projects'} onClick={handleViewDrawer} className='block tracking-wider hover:text-[#CFB53B] active:text-[#CFB53B]'>{t('projects')}</Link>
+          <Link href={'#contact'} onClick={handleViewDrawer} className='block tracking-wider hover:text-[#CFB53B] active:text-[#CFB53B]'>{t('contact')}</Link>
         </Drawer>
       </nav>
     </ConfigThemeAnt>
