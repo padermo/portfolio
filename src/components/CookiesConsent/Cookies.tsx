@@ -15,7 +15,7 @@ export default function Cookies(){
   const viewPolicyCookies = searchParams.get('view');
 
   const handleCookieConsent = () => {
-    setCookie('CookieConsent', 'accepted', {sameSite:'lax', httpOnly:true});
+    setCookie('CookieConsent', 'accepted', {sameSite:'lax'});
     setStatusConsent(true);
   }
 

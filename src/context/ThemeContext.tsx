@@ -18,7 +18,7 @@ export default function ThemeProvider({children}:Children){
   const handleTheme = (event: React.MouseEvent<HTMLButtonElement>) => {
     const {name} = event.currentTarget;
     setTheme(name)
-    setCookie('theme', name, {sameSite:'lax', secure:true, httpOnly:true})
+    setCookie('theme', name, {sameSite:'lax', secure:true})
   }
 
   useEffect(() => {
