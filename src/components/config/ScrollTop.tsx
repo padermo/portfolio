@@ -3,9 +3,11 @@ import { useState, useEffect } from 'react'
 import { FloatButton } from 'antd'
 import ConfigThemeAnt from '../ParentComponents/ConfigThemeAnt'
 import { CaretUpFilled } from '@ant-design/icons'
+import { useTranslations } from 'next-intl'
 
 export default function ScrollTop(){
   const [isView, setIsView] = useState<boolean>(false);
+  const t = useTranslations('ScrollTop')
 
   const handleScrollTop = () => {
     window.scrollTo({
@@ -17,7 +19,7 @@ export default function ScrollTop(){
 
   const ButtonIsVisible = () => {
     const valueScrollY = window.scrollY;
-    if(valueScrollY >= 720){
+    if(valueScrollY >= 550){
       setIsView(true)
     } else {
       setIsView(false)
@@ -40,7 +42,8 @@ export default function ScrollTop(){
         <FloatButton
           shape='circle'
           type='primary'
-          style={{right: 20, bottom: 20}}
+          style={{right: 20, bottom: 80}}
+          tooltip={t('tooltip')}
           icon={<CaretUpFilled className='text-[#222] dark:text-white'/>}
           onClick={handleScrollTop}
         />

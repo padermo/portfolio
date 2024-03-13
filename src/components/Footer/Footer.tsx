@@ -6,7 +6,7 @@ import Contact from '../Contact/Contact'
 export default function Footer(){
   const t = useTranslations('Footer')
   return(
-    <footer className='flex flex-col-reverse items-center gap-6 bg-white dark:bg-[#222] px-4 py-10 md:px-8 lg:px-10 lg:flex-row'>
+    <footer id='contact' className='w-full flex flex-col-reverse items-center gap-6 bg-gray-200 dark:bg-[#111] px-4 py-10 md:px-8 lg:px-10 lg:flex-row'>
       <div className='flex flex-col gap-4 items-center w-full'>
         <h3 className='text-2xl text-[#CFB53B] tracking-widest font-semibold'>{t('social')}</h3>
         <Contact/>
