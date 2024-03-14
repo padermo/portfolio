@@ -8,6 +8,7 @@ import ScrollTop from '@/components/config/ScrollTop';
 import CV from '@/components/config/CV';
 import Cookies from '@/components/CookiesConsent/Cookies';
 import Favicon from '/public/favicon.ico'
+import { Analytics } from "@vercel/analytics/react"
 
 const poppins = Poppins({ weight: ['300', '500', '700'], subsets: ['latin'] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
+            <Analytics/>
             <Navbar />
             {children}
             <ScrollTop />
