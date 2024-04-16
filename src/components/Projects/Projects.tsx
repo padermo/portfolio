@@ -2,7 +2,7 @@
 import { useRef } from 'react'
 import { useTranslations } from 'next-intl'
 import {motion, useScroll, useTransform, easeInOut, useInView } from 'framer-motion'
-import { cava, sanatorio, printec } from './images'
+import { cava, sanatorio, printec, creative } from './images'
 import Project from './Project'
 
 export default function Projects(){
@@ -24,6 +24,7 @@ export default function Projects(){
           <Project title={t('sanatorio.title')} paragraph={t('sanatorio.paragraph')} images={sanatorio} technologies={t('sanatorio.technologies').split(' ')}/>
           <Project title={t('printec.title')} paragraph={t('printec.paragraph')} images={printec} technologies={t('printec.technologies').split(' ')}/>
           <Project title={t('cava.title')} paragraph={t('cava.paragraph')} images={cava} technologies={t('cava.technologies').split(' ')}/>
+          <Project title={t('creative.title')} paragraph={t('creative.paragraph')} images={creative} technologies={t('creative.technologies').split(' ')}/>
         </motion.div>
       </div>
     </section>

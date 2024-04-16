@@ -30,6 +30,11 @@
       "title": "Importaciones Printec",
       "paragraph": "A mobile application to systematize the operation of a printer rental business.",
       "technologies": "Expo Redux-Toolkit Tailwind Moti JavaScript Node Express JWT Sequelize PostgreSQL API-Google"
+    },
+    "creative": {
+      "title": "Creative Tools",
+      "paragraph": "Explore, discover, and share essential web resources for developers and designers, with custom filters and an interactive community in our application.",
+      "technologies": "Node Express Mongoose JWT TypeScript Next Next-Intl Next-Auth Tailwind Ant-Design Context SWR"
     }
   },
   "Footer": {
