@@ -1,4 +1,4 @@
-const CV = 'https://drive.google.com/file/d/19HNEnl1Hx-4L-cv5QD7ZMTcSUN3pcl6E/view?usp=sharing';
+const CV = process.env.NEXT_PUBLIC_CV;
 const LinkedIn = 'https://www.linkedin.com/in/fabioestevezeh/';
 const GitHub = 'https://github.com/padermo';
 
