@@ -7,7 +7,7 @@ import ScrollDown from "../SVG/ScrollDown";
 export default function Header() {
   const t = useTranslations("Header");
   return (
-    <main className="w-full min-h-dvh max-h-full relative flex flex-col md:flex-row lg:flex-row gap-6 lg:gap-10 items-center justify-center bg-gray-100 px-4 md:px-8 lg:px-10 dark:bg-[#222]">
+    <main className="w-full min-h-dvh max-h-full relative flex flex-col md:flex-row lg:flex-row gap-6 lg:gap-10 items-center justify-center px-4 md:px-8 lg:px-10 dark:bg-[#222]">
       <CldImage
         src={
           "https://res.cloudinary.com/dultasdzm/image/upload/v1709752022/portfolio/perfil_iaqvcd.png"

@@ -9,9 +9,10 @@ export default function ViewDesktop() {
   const t = useTranslations("Nav");
   const searchParams = useSearchParams();
   const viewPolicyCookies = searchParams.get("view");
+
   return (
     <nav
-      className={`w-full h-16 absolute top-0 z-10 items-center justify-end bg-transparent px-4 md:px-8 lg:px-10 hidden lg:flex ${viewPolicyCookies && "lg:hidden"}`}
+      className={`w-full h-16 absolute top-0 z-10 items-center justify-end px-4 md:px-8 lg:px-10 hidden lg:flex ${viewPolicyCookies && "lg:hidden"}`}
     >
       <div className="flex items-center gap-4 text-[#222] dark:text-white">
         <Link
