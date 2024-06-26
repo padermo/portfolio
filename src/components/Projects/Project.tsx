@@ -9,7 +9,7 @@ export default function Project({
   technologies,
 }: PropsProject) {
   return (
-    <div className="rounded-md bg-[#e8e8e8] shadow-lg flex flex-col overflow-hidden w-80 dark:bg-[#333] md:w-[28rem] lg:w-[28rem]">
+    <div className="rounded-md bg-[#e8e8e8] shadow-lg shadow-black/20 flex flex-col overflow-hidden w-80 dark:bg-[#333] md:w-[28rem] lg:w-[28rem]">
       <Carousel
         dots={false}
         easing="ease-in-out"
