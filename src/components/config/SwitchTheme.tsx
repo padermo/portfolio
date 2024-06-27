@@ -1,18 +1,29 @@
-'use client'
-import { SunFilled, MoonFilled } from '@ant-design/icons'
-import { useTheme } from '@/context/ThemeContext'
+"use client";
+import { Dropdown } from "antd";
+import { FormatPainterFilled } from "@ant-design/icons";
+import { useTheme } from "@/context/ThemeContext";
 
-export default function SwitchTheme(){
-  const { handleTheme, theme } = useTheme();
+// types
+import type { MenuProps } from "antd";
 
-  return(
-    <button name={theme === 'dark' ? 'light' : 'dark'} onClick={handleTheme} className='flex items-center text-[#222] p-2 rounded-full transition-colors duration-300 ease-in-out hover:bg-[#d5d5d5] dark:hover:bg-[#555] dark:text-white hover:shadow-lg'>
-      {
-        theme === 'dark' ?
-        <SunFilled/>
-        :
-        <MoonFilled/>
-      }
-    </button>
-  )
+export default function SwitchTheme() {
+  const { handleTheme } = useTheme();
+
+  const items: MenuProps["items"] = [
+    {
+      key: "1",
+      label: <p onClick={() => handleTheme("dark")}>Dark</p>,
+    },
+    {
+      key: "2",
+      label: <p onClick={() => handleTheme("light")}>Light</p>,
+    },
+  ];
+  return (
+    <Dropdown menu={{ items }} placement="bottom">
+      <button className="rounded-full border-none flex items-center p-2 text-[#222] transition-colors duration-300 ease-in-out hover:bg-[#d5d5d5] hover:shadow-md dark:hover:bg-[#555] dark:text-white">
+        <FormatPainterFilled />
+      </button>
+    </Dropdown>
+  );
 }

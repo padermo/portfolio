@@ -1,38 +1,43 @@
-'use client'
-import { createContext, useContext, useEffect, useState } from 'react';
-import { setCookie, getCookie } from 'cookies-next'
-import type { Children, Theme } from '@/types/generals';
+"use client";
+import { createContext, useContext, useEffect, useState } from "react";
+import { setCookie, getCookie } from "cookies-next";
+import type { Children, Theme, ThemeMode } from "@/types/generals";
 
-export const ThemeContext = createContext({} as Theme)
+export const ThemeContext = createContext({} as Theme);
 
-export default function ThemeProvider({children}:Children){
-  const [theme, setTheme] = useState<string>('light');
+export default function ThemeProvider({ children }: Children) {
+  const [theme, setTheme] = useState<ThemeMode>("light");
 
-  const cookieTheme = getCookie('theme')
+  const cookieTheme = getCookie("theme") as ThemeMode;
 
-  const handleTheme = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const {name} = event.currentTarget;
-    setTheme(name)
-    setCookie('theme', name, {sameSite:'lax', secure:true})
-  }
+  const handleTheme = (name: ThemeMode) => {
+    const htmlElement = document.querySelector("html");
+    const currentTheme = htmlElement?.className;
+
+    if (currentTheme !== name) {
+      if (currentTheme) {
+        htmlElement.classList.remove(currentTheme);
+      }
+      htmlElement?.classList.add(name);
+    }
+    setTheme(name);
+    setCookie("theme", name, { sameSite: "lax", secure: true });
+  };
 
   useEffect(() => {
-    if(cookieTheme){
-      setTheme(cookieTheme)
+    if (cookieTheme) {
+      document.querySelector("html")?.classList.add(cookieTheme);
+      setTheme(cookieTheme);
     }
-  },[cookieTheme])
+  }, [cookieTheme]);
 
-  useEffect(() => {
-    if(theme === 'dark'){
-      document.querySelector('html')?.classList.add('dark')
-    } else {
-      document.querySelector('html')?.classList.remove('dark')
-    }
-  },[theme])
-
-  return <ThemeContext.Provider value={{theme, handleTheme}}>{children}</ThemeContext.Provider>
+  return (
+    <ThemeContext.Provider value={{ theme, handleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }
 
-export function useTheme(){
-  return useContext(ThemeContext)
+export function useTheme() {
+  return useContext(ThemeContext);
 }

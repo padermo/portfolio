@@ -1,25 +1,27 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 export type Children = {
-  children:ReactNode;
-}
+  children: ReactNode;
+};
+
+export type ThemeMode = "light" | "dark";
 
 export type Theme = {
-  theme: string,
-  handleTheme: (event: React.MouseEvent<HTMLButtonElement>) => void
-}
+  theme: ThemeMode;
+  handleTheme: (name: ThemeMode) => void;
+};
 
 export type Images = string[];
 
 export type PropsProject = {
-  images:Images;
+  images: Images;
   title: string;
-  paragraph:string;
+  paragraph: string;
   technologies: string[];
-}
+};
 
 export type FormInputs = {
   email: string;
   subject: string;
   message: string;
-}
+};
