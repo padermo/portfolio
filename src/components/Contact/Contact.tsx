@@ -36,8 +36,8 @@ export default function Contact() {
           <LinkedinFilled />
         </button>
       </Tooltip>
-      <Tooltip title="fabioaeh96@gmail.com" placement="bottom">
-        <ConfigThemeAnt>
+      <ConfigThemeAnt>
+        <Tooltip title="fabioaeh96@gmail.com" placement="bottom">
           <button
             onClick={copyEmailToClipboard}
             className="rounded-full flex items-center p-2 text-xl transition-colors duration-300 ease-in-out text-[#222] dark:text-white hover:bg-[#d5d5d5] dark:hover:bg-[#555] hover:shadow-lg hover:text-[#CFB53B]"
@@ -45,8 +45,8 @@ export default function Contact() {
             <MailFilled />
           </button>
           {contextHolder}
-        </ConfigThemeAnt>
-      </Tooltip>
+        </Tooltip>
+      </ConfigThemeAnt>
     </div>
   );
 }
