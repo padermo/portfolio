@@ -9,7 +9,7 @@ export default function Project({
   technologies,
 }: PropsProject) {
   return (
-    <div className="rounded-md bg-[#e8e8e8] shadow-lg shadow-black/20 flex flex-col overflow-hidden w-80 dark:bg-[#333] md:w-[28rem] lg:w-[28rem]">
+    <article className="rounded-md bg-[#e8e8e8] shadow-lg shadow-black/20 flex flex-col overflow-hidden w-80 dark:bg-[#333] md:w-[28rem] lg:w-[28rem]">
       <Carousel
         dots={false}
         easing="ease-in-out"
@@ -30,7 +30,7 @@ export default function Project({
           />
         ))}
       </Carousel>
-      <div className="flex flex-col items-center gap-3 p-3">
+      <header className="flex flex-col items-center gap-3 p-3">
         <h3 className="text-center font-semibold text-lg text-[#222] dark:text-white">
           {title}
         </h3>
@@ -47,7 +47,7 @@ export default function Project({
             </p>
           ))}
         </div>
-      </div>
-    </div>
+      </header>
+    </article>
   );
 }
