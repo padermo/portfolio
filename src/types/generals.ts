@@ -18,6 +18,7 @@ export type PropsProject = {
   title: string;
   paragraph: string;
   technologies: string[];
+  url?: string;
 };
 
 export type FormInputs = {
