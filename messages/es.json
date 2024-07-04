@@ -86,9 +86,9 @@
     "tooltip": "Ir Arriba"
   },
   "Cookies": {
-    "title":"Cookies",
-    "text":"Utilizamos cookies para mejorar tu experiencia mientras navegas por nuestro sitio.",
-    "success" : "De acuerdo",
+    "title": "Cookies",
+    "text": "Utilizamos cookies para mejorar tu experiencia mientras navegas por nuestro sitio.",
+    "success": "De acuerdo",
     "notice": "Aviso de Cookies",
     "policy": {
       "title": "Política de Cookies",
@@ -131,5 +131,9 @@
       },
       "back": "Volver."
     }
+  },
+  "Clipboard": {
+    "success": "copiado!",
+    "error": "no se pudo copiar."
   }
 }

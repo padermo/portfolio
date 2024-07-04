@@ -86,7 +86,7 @@
     "tooltip": "To Top"
   },
   "Cookies": {
-    "title":"Cookies",
+    "title": "Cookies",
     "text": "We use cookies to enhance your experience while browsing our site.",
     "success": "Agreed",
     "notice": "Cookie Notice",
@@ -131,5 +131,9 @@
       },
       "back": "Back."
     }
+  },
+  "Clipboard": {
+    "success": "Copied!",
+    "error": "Failed to copy."
   }
 }
