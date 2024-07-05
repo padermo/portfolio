@@ -24,3 +24,17 @@ body {
   -ms-transition: background 600ms ease-in-out;
   -o-transition: background 600ms ease-in-out;
 }
+
+.navigation {
+  grid-template-areas:
+    "button none"
+    "menu menu";
+}
+
+.button-area {
+  grid-area: button;
+}
+
+.menu-area {
+  grid-area: menu;
+}

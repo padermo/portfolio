@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+import type { MenuProps } from "antd";
 
 export type Children = {
   children: ReactNode;
@@ -26,3 +27,15 @@ export type FormInputs = {
   subject: string;
   message: string;
 };
+
+export type MenuItem = Required<MenuProps>["items"][number];
+
+export interface MenuReusableProps {
+  items: MenuItem[];
+  mode: "vertical" | "horizontal" | "inline";
+}
+
+export interface ViewDesktopProps {
+  items: MenuItem[];
+  itemsConfig: MenuItem[];
+}

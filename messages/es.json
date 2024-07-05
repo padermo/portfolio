@@ -4,7 +4,9 @@
     "skills": "Habilidades",
     "contact": "Contacto",
     "about": "Sobre mi",
-    "title": "Menu"
+    "title": "Menu",
+    "theme": "Tema",
+    "language": "Idioma"
   },
   "Header": {
     "welcome": "Soy Fabio Estevez",
@@ -135,5 +137,13 @@
   "Clipboard": {
     "success": "copiado!",
     "error": "no se pudo copiar."
+  },
+  "Theme": {
+    "dark": "Oscuro",
+    "light": "Claro"
+  },
+  "Language": {
+    "es": "Español",
+    "en": "Ingles"
   }
 }

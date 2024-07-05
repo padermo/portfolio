@@ -1,30 +1,30 @@
-'use client'
-import { useLocale } from 'next-intl'
-import { usePathname, useRouter } from '@/navigation'
-import { Switch } from 'antd'
-import ConfigThemeAnt from '../ParentComponents/ConfigThemeAnt'
+"use client";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/navigation";
+import { Switch } from "antd";
+import ConfigThemeAnt from "../ParentComponents/ConfigThemeAnt";
 
-export default function Lang(){
+export default function Lang() {
   const pathname = usePathname();
   const router = useRouter();
   const locale = useLocale();
 
-  const changeLang = (checked:boolean|undefined) => {
-    if(checked){
-      router.replace(pathname, {locale: 'en'})
+  const changeLang = (checked: boolean | undefined) => {
+    if (checked) {
+      router.replace(pathname, { locale: "en" });
     } else {
-      router.replace(pathname, {locale: 'es'})
+      router.replace(pathname, { locale: "es" });
     }
-  }
+  };
 
-  return(
+  return (
     <ConfigThemeAnt>
-      <Switch 
-      checkedChildren={'en'} 
-      unCheckedChildren={'es'} 
-      defaultChecked={locale === 'en' ? true : false}
-      onChange={changeLang}
+      <Switch
+        checkedChildren={"en"}
+        unCheckedChildren={"es"}
+        defaultChecked={locale === "en" ? true : false}
+        onChange={changeLang}
       />
     </ConfigThemeAnt>
-  )
+  );
 }

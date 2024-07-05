@@ -4,7 +4,9 @@
     "skills": "Skills",
     "contact": "Contact",
     "about": "About",
-    "title": "Menu"
+    "title": "Menu",
+    "theme": "Theme",
+    "language": "Language"
   },
   "Header": {
     "welcome": "I’m Fabio Estevez",
@@ -135,5 +137,13 @@
   "Clipboard": {
     "success": "Copied!",
     "error": "Failed to copy."
+  },
+  "Theme": {
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "Language": {
+    "es": "Spanish",
+    "en": "English"
   }
 }
