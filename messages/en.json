@@ -18,11 +18,6 @@
   },
   "Projects": {
     "title": "Projects",
-    "cava": {
-      "title": "Cava Verdot",
-      "paragraph": "Liquor ecommerce applying what was learned in the Henry web development bootcamp.",
-      "technologies": "React Redux CSS3 JavaScript Firebase Node Express JWT Sequelize PostgreSQL Stripe Cloudinary"
-    },
     "sanatorio": {
       "title": "Sanatorio Colegiales",
       "paragraph": "Presentation and information website about Sanatorio Colegiales located in Buenos Aires, Argentina.",

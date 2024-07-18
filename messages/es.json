@@ -18,11 +18,6 @@
   },
   "Projects": {
     "title": "Proyectos",
-    "cava": {
-      "title": "Cava Verdot",
-      "paragraph": "ecommerce de bebidas plasmando lo aprendido en el bootcamp  Henry de desarrollo web.",
-      "technologies": "React Redux CSS3 JavaScript Firebase Node Express JWT Sequelize PostgreSQL Stripe Cloudinary"
-    },
     "sanatorio": {
       "title": "Sanatorio Colegiales",
       "paragraph": "Pagina web de presentación e información sobre el Sanatorio Colegiales ubicado en Argentina, Buenos Aires.",

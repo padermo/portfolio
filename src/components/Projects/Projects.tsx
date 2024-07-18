@@ -8,7 +8,7 @@ import {
   easeInOut,
   useInView,
 } from "framer-motion";
-import { cava, sanatorio, printec, creative } from "./images";
+import { sanatorio, printec, creative } from "./images";
 import { creativeURL } from "./urlProjects";
 import Project from "./Project";
 
@@ -54,12 +54,6 @@ export default function Projects() {
             paragraph={t("printec.paragraph")}
             images={printec}
             technologies={t("printec.technologies").split(" ")}
-          />
-          <Project
-            title={t("cava.title")}
-            paragraph={t("cava.paragraph")}
-            images={cava}
-            technologies={t("cava.technologies").split(" ")}
           />
           <Project
             title={t("creative.title")}

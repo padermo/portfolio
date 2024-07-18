@@ -1,8 +1,5 @@
 import type { Images } from "@/types/generals";
 
-export const cava: Images = [
-  "https://res.cloudinary.com/dultasdzm/image/upload/v1709845935/portfolio/cava_h24kf5.jpg",
-];
 export const sanatorio: Images = [
   "https://res.cloudinary.com/dultasdzm/image/upload/v1720124482/portfolio/sanatorio_1_mm2slj.png",
   "https://res.cloudinary.com/dultasdzm/image/upload/v1720124482/portfolio/sanatorio_2_lls4u1.png",
