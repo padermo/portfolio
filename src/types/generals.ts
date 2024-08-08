@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import type { MenuProps } from "antd";
+import type { StaticImageData } from "next/image";
 
 export type Children = {
   children: ReactNode;
@@ -12,7 +13,7 @@ export type Theme = {
   handleTheme: (name: ThemeMode) => void;
 };
 
-export type Images = string[];
+export type Images = StaticImageData[];
 
 export type PropsProject = {
   images: Images;

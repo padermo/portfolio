@@ -1,4 +1,4 @@
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 import { Carousel } from "antd";
 import type { PropsProject } from "@/types/generals";
 
@@ -20,7 +20,7 @@ export default function Project({
         speed={1000}
       >
         {images.map((img, index) => (
-          <CldImage
+          <Image
             key={index}
             src={img}
             alt={title}
