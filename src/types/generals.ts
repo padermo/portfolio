@@ -15,12 +15,20 @@ export type Theme = {
 
 export type Images = StaticImageData[];
 
+export interface TooltipsURL {
+  demo: string;
+  repository: string;
+}
+
 export type PropsProject = {
   images: Images;
   title: string;
   paragraph: string;
   technologies: string[];
+  section: string;
   url?: string;
+  repository?: string;
+  tooltips?: TooltipsURL;
 };
 
 export type FormInputs = {

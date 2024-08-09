@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar/Navbar";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import ScrollTop from "@/components/config/ScrollTop";
 import CV from "@/components/config/CV";
-import Cookies from "@/components/CookiesConsent/Cookies";
 import Favicon from "/public/favicon.ico";
 
 const poppins = Poppins({ weight: ["300", "500", "700"], subsets: ["latin"] });
@@ -37,7 +36,6 @@ export default function RootLayout({
             {children}
             <ScrollTop />
             <CV />
-            <Cookies />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
