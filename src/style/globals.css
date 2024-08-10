@@ -46,3 +46,21 @@ p {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-15%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animated-div {
+  animation: bounce 1s cubic-bezier(0.6, -0.28, 0.735, 0.045) infinite;
+}

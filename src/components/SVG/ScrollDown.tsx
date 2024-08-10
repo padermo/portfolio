@@ -1,24 +1,7 @@
-import { motion } from "framer-motion";
-
 export default function ScrollDown() {
   return (
-    <motion.div
-      animate={{ y: ["0%", "-15%", "0%"] }}
-      transition={{
-        duration: 1,
-        ease: [0.6, -0.28, 0.735, 0.045],
-        times: [0, 0.5, 1],
-        repeat: Infinity,
-      }}
-      className="text-[#222] dark:text-white absolute bottom-4"
-    >
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+    <div className="text-[#222] dark:text-white absolute bottom-4 animated-div">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path
           d="M9.17154 16.8182L7.75732 18.2324L12 22.475L16.2426 18.2324L14.8284 16.8182L12 19.6466L9.17154 16.8182Z"
           fill="currentColor"
@@ -32,6 +15,6 @@ export default function ScrollDown() {
           fill="currentColor"
         />
       </svg>
-    </motion.div>
+    </div>
   );
 }
