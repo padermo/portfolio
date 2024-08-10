@@ -19,8 +19,8 @@ export default function ConfigThemeAnt({ children }: Children) {
             defaultActiveBg: "transparent",
           },
           FloatButton: {
-            colorPrimary: theme === "dark" ? "#444" : "#c5c5c5",
-            colorPrimaryHover: theme === "dark" ? "#555" : "#d5d5d5",
+            colorPrimary: theme === "dark" ? "#444" : "#fff",
+            colorPrimaryHover: theme === "dark" ? "#555" : "#f5f5f5",
           },
           Input: {
             boxShadow: "none",

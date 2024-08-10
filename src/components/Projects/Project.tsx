@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Carousel, Tooltip } from "antd";
-import { GithubFilled, GlobalOutlined } from "@ant-design/icons";
+import { Carousel } from "antd";
+import ButtonReusable from "../Reusables/ButtonReusable";
 import type { PropsProject } from "@/types/generals";
 
 export default function Project({
@@ -14,7 +14,7 @@ export default function Project({
   tooltips,
 }: PropsProject) {
   return (
-    <section className="bg-[#e8e8e8] flex flex-wrap justify-between gap-3 w-full p-6 dark:bg-[#333] lg:odd:flex-row-reverse">
+    <section className="bg-[#e8e8e8] flex flex-wrap justify-between gap-3 w-full py-6 px-4 md:px-8 lg:px-10 dark:bg-[#333] lg:odd:flex-row-reverse">
       <div className="w-full lg:w-1/2">
         <Carousel
           dots={false}
@@ -38,7 +38,7 @@ export default function Project({
           ))}
         </Carousel>
       </div>
-      <article className="w-full flex flex-1 flex-col items-center gap-3 py-4 lg:px-10">
+      <article className="w-full flex flex-1 flex-col items-center gap-3 lg:px-6">
         <h3 className="text-center font-semibold tracking-wide text-lg text-[#222] dark:text-white">
           {title}
         </h3>
@@ -62,24 +62,18 @@ export default function Project({
         </div>
         <footer className="w-full flex gap-1 mt-3">
           {!!repository && (
-            <Tooltip title={tooltips?.repository} placement="bottom">
-              <button
-                onClick={() => window.open(repository, "_blank")}
-                className="rounded-full flex items-center p-2 text-xl transition-colors duration-300 ease-in-out text-[#222] dark:text-white hover:bg-[#d5d5d5] dark:hover:bg-[#555] hover:shadow-lg hover:text-[#CFB53B]"
-              >
-                <GithubFilled />
-              </button>
-            </Tooltip>
+            <ButtonReusable
+              tooltip={tooltips?.repository as string}
+              icon="github"
+              handleClick={() => window.open(repository, "_blank")}
+            />
           )}
           {!!url && (
-            <Tooltip title={tooltips?.demo} placement="bottom">
-              <button
-                onClick={() => window.open(url, "_blank")}
-                className="rounded-full flex items-center p-2 text-xl transition-colors duration-300 ease-in-out text-[#222] dark:text-white hover:bg-[#d5d5d5] dark:hover:bg-[#555] hover:shadow-lg hover:text-[#CFB53B]"
-              >
-                <GlobalOutlined />
-              </button>
-            </Tooltip>
+            <ButtonReusable
+              tooltip={tooltips?.demo as string}
+              icon="global"
+              handleClick={() => window.open(url, "_blank")}
+            />
           )}
         </footer>
       </article>

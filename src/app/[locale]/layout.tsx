@@ -7,6 +7,7 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 import ScrollTop from "@/components/config/ScrollTop";
 import CV from "@/components/config/CV";
 import Favicon from "/public/favicon.ico";
+import ConfigThemeAnt from "@/components/ParentComponents/ConfigThemeAnt";
 
 const poppins = Poppins({ weight: ["300", "500", "700"], subsets: ["latin"] });
 
@@ -31,12 +32,14 @@ export default function RootLayout({
         className={`${poppins.className} max-w-screen-2xl m-auto relative scroll-smooth bg-gray-100`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider>
-            <Navbar />
-            {children}
-            <ScrollTop />
-            <CV />
-          </ThemeProvider>
+          <ConfigThemeAnt>
+            <ThemeProvider>
+              <Navbar />
+              {children}
+              <ScrollTop />
+              <CV />
+            </ThemeProvider>
+          </ConfigThemeAnt>
         </NextIntlClientProvider>
       </body>
     </html>

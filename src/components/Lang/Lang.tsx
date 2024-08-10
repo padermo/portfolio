@@ -2,7 +2,6 @@
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/navigation";
 import { Switch } from "antd";
-import ConfigThemeAnt from "../ParentComponents/ConfigThemeAnt";
 
 export default function Lang() {
   const pathname = usePathname();
@@ -18,13 +17,11 @@ export default function Lang() {
   };
 
   return (
-    <ConfigThemeAnt>
-      <Switch
-        checkedChildren={"en"}
-        unCheckedChildren={"es"}
-        defaultChecked={locale === "en" ? true : false}
-        onChange={changeLang}
-      />
-    </ConfigThemeAnt>
+    <Switch
+      checkedChildren={"en"}
+      unCheckedChildren={"es"}
+      defaultChecked={locale === "en" ? true : false}
+      onChange={changeLang}
+    />
   );
 }

@@ -21,17 +21,17 @@
     "section": "Tecnologías",
     "sanatorio": {
       "title": "Sanatorio Colegiales",
-      "paragraph": "Pagina web de presentación e información sobre el Sanatorio Colegiales ubicado en Argentina, Buenos Aires.",
+      "paragraph": "Durante mi colaboración en el proyecto web para el Sanatorio Colegiales en Argentina, implementé banners diseñados en Adobe Illustrator, asegurando su fidelidad visual en la web. Además, desarrollé rutas dinámicas para una navegación eficiente, un sistema de internacionalización, y gestioné formularios avanzados. También optimicé imágenes para mejorar el rendimiento y la velocidad del sitio.",
       "technologies": "Next JavaScript Sass Context"
     },
     "printec": {
       "title": "Importaciones Printec",
-      "paragraph": "Una aplicación móvil para sistematizar la operación de un negocio de alquiler de impresoras.",
+      "paragraph": "Desarrollé una aplicación móvil para Importaciones Printec que optimizó sus operaciones al incluir visualización de clientes, administración de contratos digitales, autenticación segura con roles diferenciados y facturación automatizada con envío directo de facturas por correo y descarga en PDF.",
       "technologies": "Expo Redux-Toolkit Tailwind Moti JavaScript Node Express JWT Sequelize PostgreSQL API-Google"
     },
     "creative": {
       "title": "Creative Tools",
-      "paragraph": "Explora, descubre y comparte recursos web esenciales para desarrolladores y diseñadores, con filtros personalizados y una comunidad interactiva en nuestra aplicación.",
+      "paragraph": "En el desarrollo de Creative Tools, creé una aplicación web para almacenar y compartir recursos útiles para desarrolladores y diseñadores. La plataforma permite registrar y compartir recursos, cuenta con un sistema de puntuación y favoritos, y ofrece una organización intuitiva en módulos, recursos y documentación. Además, incluye filtrado avanzado para una búsqueda personalizada y un sistema de reporte para mantenimiento comunitario.",
       "technologies": "Node Express Mongoose JWT TypeScript Next Next-Intl Next-Auth Tailwind Ant-Design Context SWR",
       "tooltips": {
         "demo": "Ver demo",
@@ -82,7 +82,7 @@
   "About": {
     "title": "Sobre Mi",
     "description": "Soy un apasionado Desarrollador Full Stack con un enfoque especial en el frontend. Mi fascinación por la tecnología me ha llevado a explorar diversas áreas de la informática, desde la programación hasta la seguridad y los videojuegos.",
-    "paragraph": "Soy una persona dedicada y orientada a la resolución de problemas, con una sólida capacidad analítica y una habilidad excepcional para gestionar el tiempo de manera eficiente. Mi enfoque autodidacta me impulsa constantemente a buscar nuevas oportunidades para aprender y mejorar mis habilidades."
+    "paragraph": "En mi carrera como freelance, he trabajado en una variedad de proyectos que van desde el desarrollo de sitios web dinámicos hasta aplicaciones móviles híbridas. Me enorgullece haber completado seis semestres de Ingeniería de Sistemas, y todo lo demás lo he aprendido de manera autodidacta, lo que demuestra mi capacidad para adaptarme y aprender nuevas tecnologías rápidamente."
   },
   "ScrollTop": {
     "tooltip": "Ir Arriba"

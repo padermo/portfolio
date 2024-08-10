@@ -48,3 +48,11 @@ export interface ViewDesktopProps {
   items: MenuItem[];
   itemsConfig: MenuItem[];
 }
+
+export type IconsKeys = "github" | "mail" | "global" | "linkedin";
+
+export interface ButtonReusableProps {
+  tooltip: string;
+  icon?: IconsKeys;
+  handleClick: () => void;
+}

@@ -21,17 +21,17 @@
     "section": "Technologies",
     "sanatorio": {
       "title": "Sanatorio Colegiales",
-      "paragraph": "Presentation and information website about Sanatorio Colegiales located in Buenos Aires, Argentina.",
+      "paragraph": "During my collaboration on the web project for Sanatorio Colegiales in Argentina, I implemented banners designed in Adobe Illustrator, ensuring their visual fidelity on the web. Additionally, I developed dynamic routes for efficient navigation, an internationalization system, and managed advanced forms. I also optimized images to enhance the site's performance and speed.",
       "technologies": "Next JavaScript Sass Context"
     },
     "printec": {
       "title": "Importaciones Printec",
-      "paragraph": "A mobile application to systematize the operation of a printer rental business.",
+      "paragraph": "I developed a mobile application for Importaciones Printec that optimized their operations by including client visualization, digital contract management, secure authentication with differentiated roles, and automated billing with direct invoice sending via email and PDF download.",
       "technologies": "Expo Redux-Toolkit Tailwind Moti JavaScript Node Express JWT Sequelize PostgreSQL API-Google"
     },
     "creative": {
       "title": "Creative Tools",
-      "paragraph": "Explore, discover, and share essential web resources for developers and designers, with custom filters and an interactive community in our application.",
+      "paragraph": "In the development of Creative Tools, I created a web application for storing and sharing useful resources for developers and designers. The platform allows users to register and share resources, features a rating and favorites system, and provides intuitive organization into modules, resources, and documentation. Additionally, it includes advanced filtering for personalized search and a reporting system for community maintenance.",
       "technologies": "Node Express Mongoose JWT TypeScript Next Next-Intl Next-Auth Tailwind Ant-Design Context SWR",
       "tooltips": {
         "demo": "View demo",
@@ -82,7 +82,7 @@
   "About": {
     "title": "About",
     "description": "Passionate Full Stack Developer with a special focus on frontend development. Fascinated by technology, I explore various areas of computer science, from programming to security and video games.",
-    "paragraph": "Dedicated individual with a problem-solving mindset, strong analytical ability, and exceptional skill for efficiently managing time. My self-taught approach constantly drives me to seek new opportunities to learn and enhance my skills."
+    "paragraph": "In my freelance career, I've worked on a variety of projects ranging from dynamic website development to hybrid mobile applications. I'm proud to have completed six semesters of Systems Engineering, and everything else I've learned has been self-taught, demonstrating my ability to adapt and quickly learn new technologies."
   },
   "ScrollTop": {
     "tooltip": "To Top"
