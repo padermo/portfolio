@@ -2,12 +2,9 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "@/style/globals.css";
 import ThemeProvider from "@/context/ThemeContext";
-import Navbar from "@/components/Navbar/Navbar";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import ScrollTop from "@/components/config/ScrollTop";
-import CV from "@/components/config/CV";
 import Favicon from "/public/favicon.ico";
-import ConfigThemeAnt from "@/components/ParentComponents/ConfigThemeAnt";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 const poppins = Poppins({ weight: ["300", "500", "700"], subsets: ["latin"] });
 
@@ -32,14 +29,9 @@ export default function RootLayout({
         className={`${poppins.className} max-w-screen-2xl m-auto relative scroll-smooth bg-gray-100`}
       >
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <ConfigThemeAnt>
-            <ThemeProvider>
-              <Navbar />
-              {children}
-              <ScrollTop />
-              <CV />
-            </ThemeProvider>
-          </ConfigThemeAnt>
+          <ThemeProvider>
+            <AntdRegistry>{children}</AntdRegistry>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
