@@ -1,54 +1,51 @@
-'use client'
-import { useState, useEffect } from 'react'
-import { FloatButton } from 'antd'
-import ConfigThemeAnt from '../ParentComponents/ConfigThemeAnt'
-import { CaretUpFilled } from '@ant-design/icons'
-import { useTranslations } from 'next-intl'
+"use client";
+import { useState, useEffect } from "react";
+import { Tooltip } from "antd";
+import { CaretUpFilled } from "@ant-design/icons";
+import { useTranslations } from "next-intl";
 
-export default function ScrollTop(){
+export default function ScrollTop() {
   const [isView, setIsView] = useState<boolean>(false);
-  const t = useTranslations('ScrollTop')
+  const t = useTranslations("ScrollTop");
 
   const handleScrollTop = () => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth'
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   const ButtonIsVisible = () => {
     const valueScrollY = window.scrollY;
-    if(valueScrollY >= 550){
-      setIsView(true)
+    if (valueScrollY >= 550) {
+      setIsView(true);
     } else {
-      setIsView(false)
+      setIsView(false);
     }
-  }
+  };
 
   useEffect(() => {
     ButtonIsVisible();
 
-    window.addEventListener('scroll', ButtonIsVisible);
+    window.addEventListener("scroll", ButtonIsVisible);
 
     return () => {
-      window.removeEventListener('scroll', ButtonIsVisible);
-    }
-  }, [])
+      window.removeEventListener("scroll", ButtonIsVisible);
+    };
+  }, []);
 
-  if(isView){
+  if (isView) {
     return (
-      <ConfigThemeAnt>
-        <FloatButton
-          shape='circle'
-          type='primary'
-          style={{right: 20, bottom: 80}}
-          tooltip={t('tooltip')}
-          icon={<CaretUpFilled className='text-[#222] dark:text-white'/>}
+      <Tooltip placement="left" title={t("tooltip")}>
+        <button
+          className="border-none rounded-full flex items-center p-3 fixed z-10 bottom-20 right-5 shadow-lg cursor-pointer bg-white dark:bg-[#444] hover:bg-[#f5f5f5] dark:hover:bg-[#555]"
           onClick={handleScrollTop}
-        />
-      </ConfigThemeAnt>
-    )
+        >
+          <CaretUpFilled className="text-[#333] dark:text-white" />
+        </button>
+      </Tooltip>
+    );
   }
 
   return null;

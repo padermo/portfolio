@@ -28,11 +28,11 @@ export default function RootLayout({
       <body
         className={`${poppins.className} max-w-screen-2xl m-auto relative scroll-smooth bg-gray-100`}
       >
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider>
-            <AntdRegistry>{children}</AntdRegistry>
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        <AntdRegistry>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <ThemeProvider>{children}</ThemeProvider>
+          </NextIntlClientProvider>
+        </AntdRegistry>
       </body>
     </html>
   );

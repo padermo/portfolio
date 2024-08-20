@@ -34,7 +34,7 @@ export default function ButtonReusable({
     <Tooltip title={tooltip} placement="bottom">
       <button
         onClick={handleClick}
-        className="rounded-full flex items-center p-2 text-xl transition-colors duration-300 ease-in-out text-[#222] dark:text-white hover:bg-[#d5d5d5] dark:hover:bg-[#555] hover:shadow-lg hover:text-[#CFB53B]"
+        className="rounded-full flex items-center p-2 text-xl transition-colors duration-300 ease-in-out text-[#222] dark:text-white hover:bg-[#f5f5f5] dark:hover:bg-[#555] hover:shadow-lg hover:text-[#CFB53B]"
       >
         {!!icon && GetIcon(icon)}
       </button>
