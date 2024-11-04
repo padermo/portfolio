@@ -7,7 +7,7 @@ export default function MenuReusable({ items, mode }: MenuReusableProps) {
     <Menu
       items={items}
       mode={mode}
-      className={`flex ${mode === "inline" ? "w-full flex-col" : "min-w-56 max-w-full"}`}
+      className={`w-full flex ${mode === "inline" ? "flex-col" : "justify-end"}`}
     />
   );
 }

@@ -33,7 +33,7 @@ export default function Project({
               width={1280}
               height={720}
               loading="lazy"
-              className="aspect-video object-cover"
+              className="aspect-video object-cover object-center rounded-md"
             />
           ))}
         </Carousel>

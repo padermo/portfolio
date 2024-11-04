@@ -22,8 +22,10 @@ export default function ViewDesktop({ items, itemsConfig }: ViewDesktopProps) {
         "w-full lg:h-16 grid gap-y-2 absolute top-0 z-10 items-center lg:justify-end navigation px-4 py-3 md:px-8 lg:px-10 lg:flex"
       }
     >
-      <div className="hidden lg:flex">
-        <MenuReusable items={items} mode="horizontal" />
+      <div className="hidden w-full lg:flex">
+        <div className="w-full">
+          <MenuReusable items={items} mode="horizontal" />
+        </div>
         <div className="flex items-center gap-3">
           <SwitchTheme />
           <Lang />
