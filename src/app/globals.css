@@ -15,13 +15,13 @@
 
   /* Colors */
   --error: #B8001C;
-  --primary: #CFB53B;
+  --primary: #9e7c2f;
   --gray: #BFBFBF;
 
 
   /* Events */
-  --primary-hover: #e7cd59;
-  --primary-active: #b49d33;
+  --primary-hover: #b28a34;
+  --primary-active: #7f5e21;
   --gray-hover: #d9d9d9;
   --gray-active: #A6A6A6;
 }
