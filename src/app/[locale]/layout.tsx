@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { poppins, montserrat } from "../fonts/fonts";
 import Favicon from "/public/favicon.ico";
 import '../globals.css';
 import 'react-toastify/dist/ReactToastify.css';
@@ -32,7 +33,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body>
+      <body className={`${poppins.variable} ${montserrat.variable}`}>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

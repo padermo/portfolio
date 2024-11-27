@@ -49,7 +49,12 @@ html.dark {
   -o-transition: background 600ms ease-in-out;
 }
 
+p {
+  font-family: var(--font-montserrat);
+}
+
 body {
+  font-family: var(--font-poppins);
   background: var(--background);
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
