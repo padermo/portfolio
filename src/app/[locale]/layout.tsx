@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import "@/style/globals.css";
-import ThemeProvider from "@/context/ThemeContext";
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import React from "react";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 import Favicon from "/public/favicon.ico";
-import { AntdRegistry } from "@ant-design/nextjs-registry";
-
-const poppins = Poppins({ weight: ["300", "500", "700"], subsets: ["latin"] });
+import '../globals.css';
+import 'react-toastify/dist/ReactToastify.css';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Fabio Estevez Developer",
@@ -15,24 +15,27 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: Favicon.src }],
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-  params: { locale },
-}: Readonly<{
+  params
+}: {
   children: React.ReactNode;
   params: { locale: string };
-}>) {
-  const messages = useMessages();
+}) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
   return (
     <html lang={locale}>
-      <body
-        className={`${poppins.className} max-w-screen-2xl m-auto relative scroll-smooth bg-gray-100`}
-      >
-        <AntdRegistry>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <ThemeProvider>{children}</ThemeProvider>
-          </NextIntlClientProvider>
-        </AntdRegistry>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

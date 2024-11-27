@@ -1,5 +1,5 @@
-import { Children } from '@/types/generals';
+import { Children } from '@/types/global.types';
 
-export default function RootLayout({children}:Children){
+export default function RootLayout({ children }: Children) {
   return children
 }

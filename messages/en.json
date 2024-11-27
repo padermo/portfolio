@@ -1,53 +1,158 @@
 {
   "Nav": {
-    "projects": "Projects",
-    "skills": "Skills",
-    "contact": "Contact",
-    "about": "About",
-    "title": "Menu",
-    "theme": "Theme",
-    "language": "Language"
+    "mobile": [
+      {
+        "label": "Projects",
+        "key": "projects"
+      },
+      {
+        "label": "Contact",
+        "key": "contact"
+      },
+      {
+        "label": "About Me",
+        "key": "about"
+      },
+      {
+        "label": "Menu",
+        "key": "title"
+      }
+    ],
+    "desktop": [
+      {
+        "label": "Projects",
+        "key": "projects"
+      },
+      {
+        "label": "About Me",
+        "key": "about"
+      },
+      {
+        "label": "Contact",
+        "key": "contact"
+      }
+    ]
+  },
+  "Settings": {
+    "theme": {
+      "label": "Theme",
+      "key": "theme",
+      "children": [
+        {
+          "label": "Dark",
+          "key": "dark"
+        },
+        {
+          "label": "Light",
+          "key": "light"
+        }
+      ]
+    },
+    "language": {
+      "label": "Language",
+      "key": "language",
+      "children": [
+        {
+          "label": "Spanish",
+          "key": "es"
+        },
+        {
+          "label": "English",
+          "key": "en"
+        }
+      ]
+    }
   },
   "Header": {
-    "welcome": "I’m Fabio Estevez",
+    "welcome": "I am Fabio Estevez",
     "rol": "Fullstack Web & Mobile Developer",
     "about": "Passionate about development and design."
   },
-  "Skills": {
-    "title": "Skills"
-  },
   "Projects": {
     "title": "Projects",
-    "section": "Technologies",
-    "sanatorio": {
-      "title": "Sanatorio Colegiales",
-      "paragraph": "During my collaboration on the web project for Sanatorio Colegiales in Argentina, I implemented banners designed in Adobe Illustrator, ensuring their visual fidelity on the web. Additionally, I developed dynamic routes for efficient navigation, an internationalization system, and managed advanced forms. I also optimized images to enhance the site's performance and speed.",
-      "technologies": "Next JavaScript Sass Context"
-    },
-    "printec": {
-      "title": "Importaciones Printec",
-      "paragraph": "I developed a mobile application for Importaciones Printec that optimized their operations by including client visualization, digital contract management, secure authentication with differentiated roles, and automated billing with direct invoice sending via email and PDF download.",
-      "technologies": "Expo Redux-Toolkit Tailwind Moti JavaScript Node Express JWT Sequelize PostgreSQL API-Google"
-    },
-    "creative": {
-      "title": "Creative Tools",
-      "paragraph": "In the development of Creative Tools, I created a web application for storing and sharing useful resources for developers and designers. The platform allows users to register and share resources, features a rating and favorites system, and provides intuitive organization into modules, resources, and documentation. Additionally, it includes advanced filtering for personalized search and a reporting system for community maintenance.",
-      "technologies": "Node Express Mongoose JWT TypeScript Next Next-Intl Next-Auth Tailwind Ant-Design Context SWR",
-      "tooltips": {
-        "demo": "View demo",
-        "repository": "View repository"
+    "content": [
+      {
+        "title": "Sanatorio Colegiales",
+        "section": "Technologies",
+        "paragraph": "During my collaboration on the web project for Sanatorio Colegiales in Argentina, I implemented banners designed in Adobe Illustrator, ensuring visual fidelity on the web. Additionally, I developed dynamic routes for efficient navigation, an internationalization system, and managed advanced forms. I also optimized images to improve site performance and speed.",
+        "technologies": [
+          "Next",
+          "JavaScript",
+          "Sass",
+          "Context"
+        ],
+        "images": [
+          "sanatorio-one",
+          "sanatorio-two",
+          "sanatorio-three"
+        ]
+      },
+      {
+        "title": "Importaciones Printec",
+        "section": "Technologies",
+        "paragraph": "I developed a mobile application for Importaciones Printec that optimized their operations by including client visualization, digital contract management, secure authentication with differentiated roles, and automated billing with direct invoice sending via email and PDF download.",
+        "technologies": [
+          "Expo",
+          "Redux-Toolkit",
+          "Tailwind",
+          "Moti",
+          "JavaScript",
+          "Node",
+          "Express",
+          "JWT",
+          "Sequelize",
+          "PostgreSQL",
+          "API-Google"
+        ],
+        "images": [
+          "printec-one",
+          "printec-two"
+        ]
+      },
+      {
+        "title": "Creative Tools",
+        "section": "Technologies",
+        "paragraph": "In the development of Creative Tools, I created a web application to store and share useful resources for developers and designers. The platform allows users to register and share resources, features a scoring and favorites system, and provides intuitive organization into modules, resources, and documentation. It also includes advanced filtering for personalized searches and a reporting system for community maintenance.",
+        "technologies": [
+          "Node",
+          "Express",
+          "Mongoose",
+          "JWT",
+          "TypeScript",
+          "Next",
+          "Next-Intl",
+          "Next-Auth",
+          "Tailwind",
+          "Ant-Design",
+          "Context",
+          "SWR"
+        ],
+        "tooltips": {
+          "demo": "demo",
+          "repository": "repository"
+        },
+        "urls": {
+          "demo": "https://creative-tools.vercel.app/",
+          "repository": "https://github.com/padermo/CreativeTools"
+        },
+        "images": [
+          "creative-one",
+          "creative-two",
+          "creative-three",
+          "creative-four"
+        ]
       }
-    }
+    ]
   },
   "Footer": {
     "contact": "Contact",
-    "social": "Social Networks",
+    "social": "Social Media",
     "reserved": "Fabio Estevez. All rights reserved."
   },
   "Form": {
     "content": {
       "email": {
-        "text": "Email",
+        "text": "Email Address",
         "placeholder": "email@example.com"
       },
       "subject": {
@@ -61,7 +166,7 @@
     },
     "errors": {
       "email": {
-        "invalid": "Enter a valid email address.",
+        "invalid": "Please enter a valid email address.",
         "required": "Email is required."
       },
       "subject": {
@@ -80,23 +185,40 @@
     }
   },
   "About": {
-    "title": "About",
-    "description": "Passionate Full Stack Developer with a special focus on frontend development. Fascinated by technology, I explore various areas of computer science, from programming to security and video games.",
-    "paragraph": "In my freelance career, I've worked on a variety of projects ranging from dynamic website development to hybrid mobile applications. I'm proud to have completed six semesters of Systems Engineering, and everything else I've learned has been self-taught, demonstrating my ability to adapt and quickly learn new technologies."
+    "right": {
+      "title": "Skills",
+      "skills": [
+        "TypeScript",
+        "JavaScript",
+        "React JS",
+        "Next JS",
+        "CSS 3",
+        "HTML 5",
+        "Sass",
+        "Tailwind",
+        "Figma",
+        "Redux Toolkit",
+        "Context",
+        "Node JS",
+        "Express",
+        "PostgreSQL",
+        "MongoDB",
+        "Git"
+      ]
+    },
+    "left": {
+      "title": "About Me",
+      "paragraphs": [
+        "I am a passionate Full Stack Developer with a special focus on frontend development. My fascination with technology has led me to explore various areas of computer science, from programming to security and video games.",
+        "In my freelance career, I have worked on a variety of projects ranging from dynamic website development to hybrid mobile applications. I am proud to have completed six semesters of Systems Engineering, and everything else I have learned is self-taught, demonstrating my ability to adapt and quickly learn new technologies."
+      ]
+    }
   },
   "ScrollTop": {
-    "tooltip": "To Top"
+    "tooltip": "Go Up"
   },
   "Clipboard": {
-    "success": "Copied!",
-    "error": "Failed to copy."
-  },
-  "Theme": {
-    "dark": "Dark",
-    "light": "Light"
-  },
-  "Language": {
-    "es": "Spanish",
-    "en": "English"
+    "success": "copied!",
+    "error": "could not copy."
   }
 }
