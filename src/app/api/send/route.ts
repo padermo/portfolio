@@ -11,20 +11,20 @@ const transporter = nodemailer.createTransport({
   }
 })
 
-export async function POST(req: Request) {
+export async function POST(req:Request){
   const res = await req.json();
   const { email, subject, message } = res;
-
+  
   try {
     await transporter.sendMail({
-      from: email,
+      from: from,
       to: from,
       subject: subject,
       text: `${message} \nContacto: ${email}`
     })
-
-    return Response.json({ message: 'success' })
+    
+    return Response.json({message: 'success'})
   } catch (error) {
-    return Response.json({ message: 'bad' })
+    return Response.json({message: 'bad'})
   }
 }

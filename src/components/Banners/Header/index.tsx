@@ -8,18 +8,20 @@ import { ChevronsDown } from "lucide-react";
 export default function Header() {
   const t = useTranslations('Header');
   return (
-    <section className="w-full h-dvh grid items-center justify-center relative">
-      <article className="flex flex-col lg:flex-row items-center gap-4">
-        <picture>
-          <Image src={'/assets/profile.webp'} alt="Fabio Estevez" width={500} height={500} className="rounded-full w-40 h-40 md:w-56 md:h-56 object-cover object-center shadow-black/30 shadow-lg" />
-        </picture>
-        <div>
-          <div className="mb-2 text-center lg:text-left">
-            <Heading as="h1" text={t('welcome')} />
-            <Heading as="h2" text={t('rol')} />
-            <Paragraph text={t('about')} className="text-lg" />
+    <section className="w-full h-dvh 2xl:h-[80dvh] grid auto-cols-auto grid-rows-1 relative">
+      <article className="px-4 lg:px-10 py-28 my-auto">
+        <div className="container mx-auto flex flex-wrap items-center justify-center gap-4">
+          <picture>
+            <Image src={'/assets/profile.webp'} alt="Fabio Estevez" width={500} height={500} className="rounded-full w-40 h-40 md:w-56 md:h-56 object-cover object-center shadow-black/30 shadow-lg" />
+          </picture>
+          <div>
+            <div className="mb-2 text-center lg:text-left">
+              <Heading as="h1" text={t('welcome')} />
+              <Heading as="h2" text={t('rol')} />
+              <Paragraph text={t('about')} className="text-lg" />
+            </div>
+            <Social />
           </div>
-          <Social />
         </div>
       </article>
       <div className="absolute bottom-12 w-full text-paragraph">

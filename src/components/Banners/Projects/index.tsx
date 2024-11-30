@@ -27,14 +27,14 @@ interface Project {
 export default function Projects() {
   const t = useTranslations('Projects');
   return (
-    <section id="projects" className='my-10'>
-      <div className='text-center py-10'>
+    <section id="projects" className='py-16'>
+      <div className='text-center mb-10'>
         <Heading as='h3' text={t('title')} />
       </div>
-      <div className='flex flex-col gap-8'>
+      <div className='grid gap-8'>
         {
           t.raw('content').map((project: Project, index: number) => (
-            <div key={index} className='bg-cards shadow-lg flex flex-wrap flex-col lg:flex-row justify-between lg:odd:flex-row-reverse'>
+            <div key={index} className='bg-cards shadow-lg grid grid-cols-1 lg:grid-cols-2 auto-rows-auto'>
               <Swiper
                 spaceBetween={30}
                 loop={true}

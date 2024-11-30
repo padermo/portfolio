@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <header className="w-full bg-transparent absolute top-0 left-0 z-20">
-      <nav className="max-w-screen-2xl mx-auto px-4 py-4 lg:px-8">
+      <nav className="mx-auto px-4 py-4 lg:px-8">
         <div className="hidden lg:block">
           <Menu direction={'horizont'} className="justify-end">
             <Menu.Item items={t.raw('desktop')} />

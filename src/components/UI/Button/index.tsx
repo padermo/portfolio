@@ -10,7 +10,7 @@ const buttonStyle = cva(
         default: 'bg-transparent text-paragraph hover:text-primary',
         primary: 'bg-primary text-paragraph hover:bg-primary-hover rounded-md active:bg-primary-active',
         icon: 'bg-gray grid items-center justify-center w-10 rounded-full hover:shadow-black/30 hover:shadow-lg cursor-pointer text-paragraph hover:bg-gray-hover active:bg-gray-active hover:text-primary',
-        textIcon: 'flex items-center justify-center gap-4 bg-primary rounded-md text-paragraph hover:bg-primary-hover active:bg-primary-active',
+        textIcon: 'flex items-center gap-4 bg-primary rounded-md text-paragraph hover:bg-primary-hover active:bg-primary-active',
       },
       size: {
         large: 'text-lg',
