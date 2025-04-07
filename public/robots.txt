@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://fabio-estevez-developer.vercel.app
+
+# Sitemaps
+Sitemap: https://fabio-estevez-developer.vercel.app/sitemap.xml

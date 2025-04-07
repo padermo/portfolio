@@ -81,6 +81,12 @@
           "Sass",
           "Context"
         ],
+        "tooltips": {
+          "demo": "demo"
+        },
+        "urls": {
+          "demo": "https://sanatoriocolegiales.com.ar/"
+        },
         "images": [
           "sanatorio-one",
           "sanatorio-two",
