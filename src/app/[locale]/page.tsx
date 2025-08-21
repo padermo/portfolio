@@ -1,12 +1,33 @@
-import PageLayout from "@/components/PageLayout"
-import { Header, About, Projects } from "@/components/Banners"
+"use client";
+import { useEffect } from "react";
+import { Header, Experience, Projects, About } from "@/components/Banners";
+import Navbar from "@/components/Navbar";
+import Lenis from "lenis";
 
-export default function Page() {
+export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2, // desplazamiento (tiempo en segundos)
+      lerp: 0.08, // suavizado
+      touchMultiplier: 1.2, //sensibilidad touch
+      smoothWheel: true, // suavizado mouse
+      wheelMultiplier: 1, // sensibilidad mouse
+    });
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
-    <PageLayout>
+    <main>
+      <Navbar />
       <Header />
-      <About />
+      <Experience />
       <Projects />
-    </PageLayout>
-  )
+      <About />
+    </main>
+  );
 }

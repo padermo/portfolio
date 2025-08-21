@@ -1,25 +1,21 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import type { ContentProject } from "../Projects";
 
-export interface ContentProject {
-  title: string;
-  paragraph: string;
-  skills: string[];
-  image: string;
-  url?: string;
+interface AllProjectsProps {
+  selectedSkill: string[];
 }
 
-export const Projects = () => {
-  const t = useTranslations("home.projects");
+export const AllProjects = ({ selectedSkill }: AllProjectsProps) => {
+  const t = useTranslations("projects.allProjects");
   const projects: ContentProject[] = t.raw("content");
 
   return (
-    <article id="projects">
+    <section id="allProjects">
       <div>
         <div>
           <h3>{t("title")}</h3>
-          <div className="projects">
+          <div className="all-projects">
             {projects.map((data: ContentProject, i: number) => (
               <div key={i} className="project-card">
                 <Image
@@ -43,7 +39,10 @@ export const Projects = () => {
                   <p>{data.paragraph}</p>
                   <div className="skills">
                     {data.skills.map((skill: string, j: number) => (
-                      <div className="tag" key={j}>
+                      <div
+                        className={`tag ${selectedSkill.includes(skill) ? "text-primary" : "text-foreground"}`}
+                        key={j}
+                      >
                         {skill}
                       </div>
                     ))}
@@ -52,11 +51,8 @@ export const Projects = () => {
               </div>
             ))}
           </div>
-          <Link href="/projects" className="text-sm underline">
-            {t("more")}
-          </Link>
         </div>
       </div>
-    </article>
+    </section>
   );
 };

@@ -1,62 +1,61 @@
-import React from "react";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
-import Favicon from "/public/favicon.ico";
-import Script from "next/script";
-import '../globals.css';
-import 'react-toastify/dist/ReactToastify.css';
 import type { Metadata } from "next";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import { Poppins, Montserrat } from "next/font/google";
+import FloatBtn from "@/components/FloatBtn";
+import "./globals.css";
+import { Contact, Network } from "@/components/Banners";
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["300", "400", "500"],
+  subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  weight: ["200", "300"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Fabio Estevez | Web & Mobile Developer Portfolio",
   description:
     "Fabio Estevez es un desarrollador web y móvil apasionado, especializado en React, Next.js y tecnologías frontend modernas. Explora sus proyectos, habilidades y experiencia creando aplicaciones responsivas y fáciles de usar.",
-  keywords: "Fabio Estevez, Web Developer, Mobile Developer, React, Next.js, Frontend Developer, JavaScript, TypeScript, Portfolio, Responsive Web Design, Software Engineer",
-  icons: [{ rel: "icon", url: Favicon.src }],
+  keywords:
+    "Fabio Estevez, Web Developer, Mobile Developer, React, Next.js, Frontend Developer, JavaScript, TypeScript, Portfolio, Responsive Web Design, Software Engineer",
 };
 
-export default async function LocaleLayout({
+export default async function RootLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  // Ensure that the incoming `locale` is valid
   const { locale } = await params;
-
-  if (!routing.locales.includes(locale as any)) {
+  if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
 
-  const messages = await getMessages();
-
   return (
     <html lang={locale}>
-      <head>
-        <Script
-          id="structured-data"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Fabio Estevez",
-              "url": "https://fabio-estevez-developer.vercel.app",
-              "jobTitle": "Web and Mobile Developer",
-              "sameAs": [
-                "https://github.com/tuusuario",
-                "https://www.linkedin.com/in/tuusuario"
-              ]
-            })
-          }}
-        />
-      </head>
-      <body>
-        <NextIntlClientProvider messages={messages}>
+      <body
+        className={`${poppins.variable} ${montserrat.variable} antialiased`}
+      >
+        <NextIntlClientProvider>
           {children}
+          <footer>
+            <div>
+              <div>
+                <Contact />
+                <Network />
+              </div>
+            </div>
+          </footer>
+          <FloatBtn />
         </NextIntlClientProvider>
       </body>
     </html>

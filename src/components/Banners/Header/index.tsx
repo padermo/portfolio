@@ -1,32 +1,81 @@
 "use client";
 import Image from "next/image";
-import Social from "@/components/Social";
 import { useTranslations } from "next-intl";
-import { Heading, Paragraph } from "@/components/UI";
-import { ChevronsDown } from "lucide-react";
+import Social from "@/components/Social";
 
-export default function Header() {
-  const t = useTranslations('Header');
+const EMAIL = process.env.NEXT_PUBLIC_EMAIL as string;
+const CV = process.env.NEXT_PUBLIC_CV;
+
+export const Header = () => {
+  const t = useTranslations("home.header");
+  const paragraphs: string[] = t.raw("paragraph");
+
+  const copyClipboardEmail = () => {
+    navigator.clipboard.writeText(EMAIL);
+  };
+
   return (
-    <section className="w-full h-dvh 2xl:h-[80dvh] grid auto-cols-auto grid-rows-1 relative">
-      <article className="px-4 lg:px-10 py-28 my-auto">
-        <div className="container mx-auto flex flex-wrap items-center justify-center gap-4">
-          <picture>
-            <Image src={'/assets/profile.webp'} alt="Fabio Estevez" width={500} height={500} className="rounded-full w-40 h-40 md:w-56 md:h-56 object-cover object-center shadow-black/30 shadow-lg" />
-          </picture>
+    <article id="header">
+      <div>
+        <div>
+          <Image
+            src="/images/profile.webp"
+            alt="Fabio Estevez"
+            width={958}
+            height={1042}
+          />
           <div>
-            <div className="mb-2 text-center lg:text-left">
-              <Heading as="h1" text={t('welcome')} />
-              <Heading as="h2" text={t('rol')} />
-              <Paragraph text={t('about')} className="text-lg" />
+            <h1>{t("title")}</h1>
+            <h2>{t("subtitle")}</h2>
+            <div>
+              {paragraphs.map((text: string, i: number) => (
+                <p key={i}>{text}</p>
+              ))}
             </div>
-            <Social />
+            <div className="social">
+              <Social />
+              <button className="cta" onClick={copyClipboardEmail}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-mail"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                  <path d="M3 7l9 6l9 -6" />
+                </svg>
+                <span>{EMAIL}</span>
+              </button>
+              <a href={CV} target="_blank" className="cta">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-file"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                  <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                </svg>
+                <span>{t("cta")}</span>
+              </a>
+            </div>
           </div>
         </div>
-      </article>
-      <div className="absolute bottom-12 w-full text-paragraph">
-        <ChevronsDown className="motion-safe:animate-bounce mx-auto" />
       </div>
-    </section>
-  )
-}
+    </article>
+  );
+};

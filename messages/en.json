@@ -1,230 +1,281 @@
 {
-  "Nav": {
-    "mobile": [
+  "navbar": {
+    "menu": [
       {
-        "label": "Projects",
-        "key": "projects"
+        "text": "Experience",
+        "id": "experience"
       },
       {
-        "label": "Contact",
-        "key": "contact"
+        "text": "Projects",
+        "id": "projects"
       },
       {
-        "label": "About Me",
-        "key": "about"
+        "text": "About Me",
+        "id": "about"
       },
       {
-        "label": "Menu",
-        "key": "title"
+        "text": "Contact",
+        "id": "contact"
       }
     ],
-    "desktop": [
-      {
-        "label": "Projects",
-        "key": "projects"
-      },
-      {
-        "label": "About Me",
-        "key": "about"
-      },
-      {
-        "label": "Contact",
-        "key": "contact"
-      }
-    ]
+    "lang": {
+      "es": "Es",
+      "en": "En"
+    }
   },
-  "Settings": {
-    "theme": {
-      "label": "Theme",
-      "key": "theme",
-      "children": [
+  "home": {
+    "header": {
+      "title": "I am Fabio Estevez",
+      "subtitle": "Fullstack Web & Mobile Developer",
+      "paragraph": [
+        "+3 years of experience developing digital solutions",
+        "that transform ideas into functional products."
+      ],
+      "cta": "view CV"
+    },
+    "experience": {
+      "title": "Work Experience",
+      "content": [
         {
-          "label": "Dark",
-          "key": "dark"
+          "date": "October. 2024 – Present",
+          "roll": "Frontend Developer – Sira Agency",
+          "paragraph": [
+            "Implementation of modern and responsive websites for clients from various sectors.",
+            "SEO and performance optimization to improve user experience."
+          ]
         },
         {
-          "label": "Light",
-          "key": "light"
+          "date": "May. 2023 – January. 2024",
+          "roll": "Frontend Developer – Importaciones Printec",
+          "paragraph": [
+            "Development of a mobile app to systematize internal operations.",
+            "Designed and structured the complete client interface."
+          ]
+        },
+        {
+          "date": "April. 2023 – January. 2024",
+          "roll": "Frontend Developer – Blacklab Agency",
+          "paragraph": [
+            "Participation in the creation of a healthcare portal in Argentina.",
+            "Implementation of internationalization, forms, and optimization of visual resources."
+          ]
+        },
+        {
+          "date": "March. 2023 – April. 2023",
+          "roll": "Frontend Developer – Half App",
+          "paragraph": [
+            "Contributed to the creation of key modules for a restaurant app.",
+            "Development of components, routes, and global state management."
+          ]
+        },
+        {
+          "date": "December. 2016 - Present",
+          "roll": "Content Creator – YouTube",
+          "paragraph": [
+            "Creation of technology and gaming content, reaching an active digital community.",
+            "Experience in digital marketing, video editing, and audience management."
+          ]
         }
       ]
     },
-    "language": {
-      "label": "Language",
-      "key": "language",
-      "children": [
+    "projects": {
+      "title": "Projects",
+      "more": "See more projects.",
+      "content": [
         {
-          "label": "Spanish",
-          "key": "es"
+          "title": "Sanatorio Colegiales",
+          "paragraph": "Implemented banners faithful to the original design, dynamic routes, internationalization system, and advanced forms, optimizing images to improve site performance and speed.",
+          "skills": [
+            "Next JS",
+            "React JS",
+            "JavaScript",
+            "Sass",
+            "Context",
+            "Git"
+          ],
+          "url": "https://sanatoriocolegiales.com.ar/",
+          "image": "creative-two"
         },
         {
-          "label": "English",
-          "key": "en"
+          "title": "Creative Tools",
+          "paragraph": "Created a website to store and share resources for developers and designers, with favorites system, rating, advanced filtering, and intuitive modular organization.",
+          "skills": [
+            "Next JS",
+            "React JS",
+            "TypeScript",
+            "Tailwind",
+            "Context",
+            "SWR",
+            "Node JS",
+            "Express",
+            "JWT",
+            "MongoDB",
+            "Next Intl",
+            "Git"
+          ],
+          "url": "https://creative-tools.vercel.app/",
+          "image": "sanatorio-one"
         }
       ]
+    },
+    "about": {
+      "title": "About Me",
+      "paragraph": [
+        "My name is Fabio Andrés. My journey with code started at 16 and took an unexpected path through technical support and creating YouTube videos. That journey, which enriched my perspective, eventually guided me back to my original goal: to be a developer who builds solutions with the user always in mind.",
+        "That experience gave me a unique understanding of user needs and the ability to communicate ideas clearly. Today, I apply those lessons in my obsession with creating functional and intuitive software, writing clean and efficient code that solves real problems."
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "inputs": {
+        "email": {
+          "placeholder": "Email",
+          "invalid": "Enter a valid email address.",
+          "required": "Email is required."
+        },
+        "subject": {
+          "placeholder": "Subject",
+          "required": "Subject is required."
+        },
+        "message": {
+          "placeholder": "Message",
+          "required": "Message is required."
+        }
+      },
+      "button": "Send",
+      "alerts": {
+        "success": "Email sent successfully.",
+        "bad": "An error occurred. Please try again."
+      }
+    },
+    "social": {
+      "title": "Social Media"
     }
   },
-  "Header": {
-    "welcome": "I am Fabio Estevez",
-    "rol": "Fullstack Web & Mobile Developer",
-    "about": "Passionate about development and design."
-  },
-  "Projects": {
-    "title": "Projects",
-    "content": [
-      {
-        "title": "Sanatorio Colegiales",
-        "section": "Technologies",
-        "paragraph": "During my collaboration on the web project for Sanatorio Colegiales in Argentina, I implemented banners designed in Adobe Illustrator, ensuring visual fidelity on the web. Additionally, I developed dynamic routes for efficient navigation, an internationalization system, and managed advanced forms. I also optimized images to improve site performance and speed.",
-        "technologies": [
-          "Next",
-          "JavaScript",
-          "Sass",
-          "Context"
-        ],
-        "tooltips": {
-          "demo": "demo"
-        },
-        "urls": {
-          "demo": "https://sanatoriocolegiales.com.ar/"
-        },
-        "images": [
-          "sanatorio-one",
-          "sanatorio-two",
-          "sanatorio-three"
-        ]
-      },
-      {
-        "title": "Importaciones Printec",
-        "section": "Technologies",
-        "paragraph": "I developed a mobile application for Importaciones Printec that optimized their operations by including client visualization, digital contract management, secure authentication with differentiated roles, and automated billing with direct invoice sending via email and PDF download.",
-        "technologies": [
-          "Expo",
-          "Redux-Toolkit",
-          "Tailwind",
-          "Moti",
-          "JavaScript",
-          "Node",
-          "Express",
-          "JWT",
-          "Sequelize",
-          "PostgreSQL",
-          "API-Google"
-        ],
-        "images": [
-          "printec-one",
-          "printec-two"
-        ]
-      },
-      {
-        "title": "Creative Tools",
-        "section": "Technologies",
-        "paragraph": "In the development of Creative Tools, I created a web application to store and share useful resources for developers and designers. The platform allows users to register and share resources, features a scoring and favorites system, and provides intuitive organization into modules, resources, and documentation. It also includes advanced filtering for personalized searches and a reporting system for community maintenance.",
-        "technologies": [
-          "Node",
-          "Express",
-          "Mongoose",
-          "JWT",
-          "TypeScript",
-          "Next",
-          "Next-Intl",
-          "Next-Auth",
-          "Tailwind",
-          "Ant-Design",
-          "Context",
-          "SWR"
-        ],
-        "tooltips": {
-          "demo": "demo",
-          "repository": "repository"
-        },
-        "urls": {
-          "demo": "https://creative-tools.vercel.app/",
-          "repository": "https://github.com/padermo/CreativeTools"
-        },
-        "images": [
-          "creative-one",
-          "creative-two",
-          "creative-three",
-          "creative-four"
-        ]
-      }
-    ]
-  },
-  "Footer": {
-    "contact": "Contact",
-    "social": "Social Media",
-    "reserved": "Fabio Estevez. All rights reserved."
-  },
-  "Form": {
-    "content": {
-      "email": {
-        "text": "Email Address",
-        "placeholder": "email@example.com"
-      },
-      "subject": {
-        "text": "Subject",
-        "placeholder": "Subject..."
-      },
-      "message": {
-        "text": "Message",
-        "placeholder": "..."
-      }
-    },
-    "errors": {
-      "email": {
-        "invalid": "Please enter a valid email address.",
-        "required": "Email is required."
-      },
-      "subject": {
-        "required": "Subject is required."
-      },
-      "message": {
-        "required": "Message is required."
-      }
-    },
-    "server": {
-      "success": "Email sent successfully.",
-      "bad": "An error occurred. Please try again."
-    },
-    "actions": {
-      "button": "Send"
-    }
-  },
-  "About": {
-    "right": {
+  "projects": {
+    "skills": {
       "title": "Skills",
+      "paragraph": "Click on a skill to see in which projects I have applied it.",
       "skills": [
+        "Next JS",
+        "React JS",
+        "React Native",
+        "Vite",
         "TypeScript",
         "JavaScript",
-        "React JS",
-        "Next JS",
-        "CSS 3",
-        "HTML 5",
-        "Sass",
+        "CSS",
+        "HTML",
         "Tailwind",
-        "Figma",
-        "Redux Toolkit",
-        "Context",
+        "Sass",
+        "Framer Motion",
+        "Bootstrap",
         "Node JS",
         "Express",
         "PostgreSQL",
         "MongoDB",
+        "Redux",
+        "Context",
         "Git"
       ]
     },
-    "left": {
-      "title": "About Me",
-      "paragraphs": [
-        "I am a passionate Full Stack Developer with a special focus on frontend development. My fascination with technology has led me to explore various areas of computer science, from programming to security and video games.",
-        "In my freelance career, I have worked on a variety of projects ranging from dynamic website development to hybrid mobile applications. I am proud to have completed six semesters of Systems Engineering, and everything else I have learned is self-taught, demonstrating my ability to adapt and quickly learn new technologies."
+    "allProjects": {
+      "title": "Projects",
+      "content": [
+        {
+          "title": "Sanatorio Colegiales",
+          "paragraph": "Implemented banners faithful to the original design, dynamic routes, internationalization system, and advanced forms, optimizing images to improve site performance and speed.",
+          "skills": [
+            "Next JS",
+            "React JS",
+            "JavaScript",
+            "Sass",
+            "Context",
+            "Git"
+          ],
+          "url": "https://sanatoriocolegiales.com.ar/",
+          "image": "creative-two"
+        },
+        {
+          "title": "Creative Tools",
+          "paragraph": "Created a website to store and share resources for developers and designers, with favorites system, rating, advanced filtering, and intuitive modular organization.",
+          "skills": [
+            "Next JS",
+            "React JS",
+            "TypeScript",
+            "Tailwind",
+            "Context",
+            "SWR",
+            "Node JS",
+            "Express",
+            "JWT",
+            "MongoDB",
+            "Next Intl",
+            "Git"
+          ],
+          "url": "https://creative-tools.vercel.app/",
+          "image": "sanatorio-one"
+        },
+        {
+          "title": "Importaciones Printec",
+          "paragraph": "Developed a mobile app that manages clients, contracts, automated invoicing, and user roles with secure authentication, optimizing company operations.",
+          "skills": [
+            "React Native",
+            "React JS",
+            "JavaScript",
+            "Tailwind",
+            "Redux",
+            "Moti",
+            "Node JS",
+            "SWR",
+            "JWT",
+            "Express",
+            "PostgreSQL",
+            "Git"
+          ],
+          "image": "printec-two"
+        },
+        {
+          "title": "Analia Puentes",
+          "paragraph": "Designed and implemented a presentation website based on Figma, optimizing images, performance, and SEO to highlight her professional career.",
+          "skills": [
+            "Vite",
+            "HTML",
+            "Tailwind",
+            "JavaScript",
+            "Git"
+          ],
+          "url": "https://www.analiapuentes.com/",
+          "image": "analia-one"
+        },
+        {
+          "title": "Regionario",
+          "paragraph": "Developed the presentation website for wines with a faithful design in Illustrator, incorporating parallax animations, scrollspy, and smooth scrolling for a fluid experience.",
+          "skills": [
+            "Next JS",
+            "React JS",
+            "TypeScript",
+            "Tailwind",
+            "Framer Motion",
+            "Swiper",
+            "Next Intl",
+            "Git"
+          ],
+          "image": "regionario-one"
+        },
+        {
+          "title": "Bristol Medicine",
+          "paragraph": "Collaborated on the Bristol Medicine website implementing Figma banners, advanced forms, and optimization of images and site performance.",
+          "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap",
+            "Git"
+          ],
+          "url": "https://www.bristolmedicine.com.ar/",
+          "image": "bristol-one"
+        }
       ]
     }
-  },
-  "ScrollTop": {
-    "tooltip": "Go Up"
-  },
-  "Clipboard": {
-    "success": "copied!",
-    "error": "could not copy."
   }
 }

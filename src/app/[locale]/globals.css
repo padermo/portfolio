@@ -1,0 +1,324 @@
+@import "tailwindcss";
+
+:root {
+  --background: #111;
+  --foreground: #fff;
+  --primary: #cfb53b;
+  --primary-hover: #e7cd59;
+  --primary-active: #b49d33;
+  --placeholder: #d9d9d9;
+  --dark-3: #333;
+  --dark-2: #222;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+  --color-placeholder: var(--placeholder);
+  --color-dark-3: var(--dark-3);
+  --color-dark-2: var(--dark-2);
+  --font-poppins: var(--font-poppins);
+  --font-montserrat: var(--font-montserrat);
+}
+
+body {
+  background-image:
+    radial-gradient(circle at top, #666666 0%, #333333 25%, transparent 100%),
+    linear-gradient(#222222, #222222);
+  color: var(--foreground);
+  font-family: var(--font-montserrat);
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -6px;
+  width: 11px;
+  height: 11px;
+  background-color: var(--placeholder);
+  border-radius: 50px;
+}
+
+@layer components {
+  h1 {
+    @apply text-4xl md:text-5xl font-bold font-poppins;
+  }
+
+  h2 {
+    @apply text-primary text-xl md:text-2xl font-medium font-poppins break-all text-wrap;
+  }
+
+  h3 {
+    @apply text-xl md:text-3xl font-medium font-poppins mb-4;
+  }
+
+  h4 {
+    @apply text-primary font-bold font-poppins text-lg;
+  }
+
+  p {
+    @apply inline-block;
+  }
+
+  input,
+  textarea {
+    @apply w-full border border-background rounded-md py-2 px-3 bg-dark-3 outline-none;
+  }
+
+  textarea {
+    @apply resize-none;
+  }
+
+  button[type="submit"] {
+    @apply bg-primary rounded-md text-center flex flex-row-reverse items-center justify-center gap-3 text-background h-10 cursor-pointer hover:bg-primary-hover active:bg-primary-active disabled:bg-placeholder disabled:cursor-not-allowed;
+  }
+
+  main {
+    @apply relative w-full px-4 lg:px-0;
+  }
+
+  nav {
+    @apply flex flex-col md:flex-row py-4 md:py-0 w-full md:justify-center;
+
+    .desktop {
+      @apply hidden md:flex fixed top-3 w-auto m-auto shadow-md shadow-background/50 backdrop-blur-lg rounded-lg m-auto bg-background/50 gap-4 items-center py-4 px-6 z-10;
+
+      button {
+        @apply cursor-pointer transition duration-300 ease-in-out hover:text-primary;
+      }
+    }
+
+    .mobile {
+      @apply relative w-full;
+
+      div {
+        @apply absolute top-0 left-0 w-full flex md:hidden flex-col gap-2 p-2 justify-start items-start rounded-md backdrop-blur-lg bg-background/50 transition-all duration-300 ease-in-out;
+      }
+    }
+
+    .open {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .close {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .menu {
+      @apply block md:hidden;
+
+      button {
+        @apply cursor-pointer;
+      }
+    }
+  }
+
+  .float-btn {
+    @apply fixed flex bottom-6 right-6 w-10 h-10 rounded-full backdrop-blur-lg bg-background/50 justify-center items-center p-2 shadow-md shadow-background/50 cursor-pointer;
+  }
+
+  #header {
+    @apply pt-5 md:pt-40 pb-20;
+
+    div {
+      @apply container m-auto;
+
+      div {
+        @apply w-full lg:w-3xl flex flex-col md:flex-row justify-center items-center gap-6;
+
+        img {
+          @apply rounded-full aspect-square w-[250px] h-[250px] shadow-lg shadow-background/50 object-cover;
+        }
+
+        div {
+          @apply w-full flex flex-col flex-wrap text-center md:text-start justify-center items-center md:items-start gap-2;
+
+          div {
+            @apply gap-0;
+          }
+        }
+      }
+    }
+
+    .social {
+      @apply flex flex-row items-center justify-center md:justify-start gap-4;
+
+      a,
+      button {
+        @apply cursor-pointer transition duration-300 ease-in-out hover:text-primary;
+      }
+
+      .cta {
+        @apply flex items-center gap-2 rounded-md bg-dark-2 px-3 py-2 text-sm;
+      }
+    }
+  }
+
+  #experience {
+    @apply py-5 md:py-10;
+
+    div {
+      @apply container m-auto;
+
+      div {
+        @apply w-full lg:w-3xl;
+      }
+    }
+
+    .timeline {
+      @apply border-l border-l-placeholder;
+    }
+
+    .card {
+      @apply py-3 px-4 relative;
+    }
+
+    .date {
+      @apply text-sm;
+    }
+  }
+
+  #projects {
+    @apply py-5 md:py-10;
+
+    div {
+      @apply container m-auto;
+
+      div {
+        @apply w-full lg:w-3xl;
+
+        .project-card {
+          @apply overflow-hidden rounded-lg backdrop-blur-lg bg-background/50 shadow-lg shadow-background/50 mb-4;
+
+          .project-body {
+            @apply py-3 px-4 flex-1;
+
+            & > a {
+              @apply font-bold font-poppins text-lg;
+            }
+
+            .skills {
+              @apply flex w-full gap-2 flex-wrap justify-start mt-2;
+            }
+
+            .tag {
+              @apply text-center mx-0 w-auto rounded-sm py-1 px-2 bg-dark-3/50 text-sm;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #about {
+    @apply py-5 md:py-10;
+
+    div {
+      @apply container m-auto;
+
+      div {
+        @apply w-full lg:w-3xl;
+      }
+    }
+  }
+
+  footer {
+    @apply py-5 md:py-10 px-4 lg:px-0;
+
+    div {
+      @apply container m-auto;
+
+      div {
+        @apply w-full lg:w-3xl flex flex-col lg:flex-row items-center justify-between gap-4;
+      }
+    }
+  }
+
+  #contact {
+    @apply flex flex-col items-start w-full lg:w-xl gap-0;
+  }
+
+  #network {
+    @apply flex flex-col py-4 gap-0;
+
+    div {
+      @apply w-auto flex flex-row gap-2;
+
+      a {
+        @apply cursor-pointer transition duration-300 ease-in-out hover:text-primary;
+      }
+    }
+  }
+
+  #skills {
+    @apply pt-5 md:pt-40 pb-10;
+
+    div {
+      @apply container m-auto;
+
+      div {
+        @apply w-full lg:w-3xl;
+
+        h3 {
+          @apply mb-0;
+        }
+
+        p {
+          @apply mb-4;
+        }
+
+        .skill-options {
+          @apply flex w-full gap-3 flex-wrap justify-start;
+
+          button {
+            @apply text-xl cursor-pointer;
+          }
+        }
+      }
+    }
+  }
+
+  #allProjects {
+    @apply pt-5 md:py-10;
+
+    div {
+      @apply container m-auto;
+
+      div {
+        @apply w-full lg:w-3xl;
+
+        .project-card {
+          @apply mb-4;
+
+          img {
+            @apply rounded-lg shadow-lg shadow-background/50;
+          }
+
+          .project-body {
+            @apply py-3 flex-1;
+
+            & > a {
+              @apply font-bold font-poppins text-lg;
+            }
+
+            .skills {
+              @apply flex w-full gap-2 flex-wrap justify-start mt-2;
+            }
+
+            .tag {
+              @apply text-center mx-0 w-auto rounded-sm py-1 px-2 bg-dark-2 text-sm;
+            }
+          }
+        }
+      }
+    }
+  }
+}
