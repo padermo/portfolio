@@ -94,7 +94,7 @@
             "Git"
           ],
           "url": "https://sanatoriocolegiales.com.ar/",
-          "image": "creative-two"
+          "image": "sanatorio-one"
         },
         {
           "title": "Creative Tools",
@@ -114,7 +114,7 @@
             "Git"
           ],
           "url": "https://creative-tools.vercel.app/",
-          "image": "sanatorio-one"
+          "image": "creative-two"
         }
       ]
     },
@@ -193,7 +193,7 @@
             "Git"
           ],
           "url": "https://sanatoriocolegiales.com.ar/",
-          "image": "creative-two"
+          "image": "sanatorio-one"
         },
         {
           "title": "Creative Tools",
@@ -213,7 +213,7 @@
             "Git"
           ],
           "url": "https://creative-tools.vercel.app/",
-          "image": "sanatorio-one"
+          "image": "creative-two"
         },
         {
           "title": "Importaciones Printec",
@@ -237,13 +237,7 @@
         {
           "title": "Analia Puentes",
           "paragraph": "Designed and implemented a presentation website based on Figma, optimizing images, performance, and SEO to highlight her professional career.",
-          "skills": [
-            "Vite",
-            "HTML",
-            "Tailwind",
-            "JavaScript",
-            "Git"
-          ],
+          "skills": ["Vite", "HTML", "Tailwind", "JavaScript", "Git"],
           "url": "https://www.analiapuentes.com/",
           "image": "analia-one"
         },
@@ -265,13 +259,7 @@
         {
           "title": "Bristol Medicine",
           "paragraph": "Collaborated on the Bristol Medicine website implementing Figma banners, advanced forms, and optimization of images and site performance.",
-          "skills": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Bootstrap",
-            "Git"
-          ],
+          "skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "Git"],
           "url": "https://www.bristolmedicine.com.ar/",
           "image": "bristol-one"
         }
@@ -279,3 +267,4 @@
     }
   }
 }
+
