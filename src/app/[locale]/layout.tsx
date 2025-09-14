@@ -6,6 +6,7 @@ import { Poppins, Montserrat } from "next/font/google";
 import FloatBtn from "@/components/FloatBtn";
 import "./globals.css";
 import { Contact, Network } from "@/components/Banners";
+import { AlertProvider } from "@/context/AlertContext";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -45,18 +46,20 @@ export default async function RootLayout({
       <body
         className={`${poppins.variable} ${montserrat.variable} antialiased`}
       >
-        <NextIntlClientProvider>
-          {children}
-          <footer>
-            <div>
+        <AlertProvider>
+          <NextIntlClientProvider>
+            {children}
+            <footer>
               <div>
-                <Contact />
-                <Network />
+                <div>
+                  <Contact />
+                  <Network />
+                </div>
               </div>
-            </div>
-          </footer>
-          <FloatBtn />
-        </NextIntlClientProvider>
+            </footer>
+            <FloatBtn />
+          </NextIntlClientProvider>
+        </AlertProvider>
       </body>
     </html>
   );

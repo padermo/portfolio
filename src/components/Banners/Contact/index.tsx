@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import axios from "axios";
+import { useAlert } from "@/context/AlertContext";
 
 interface FormInputs {
   email: string;
@@ -11,6 +12,7 @@ interface FormInputs {
 }
 
 export const Contact = () => {
+  const { success, warning } = useAlert();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const t = useTranslations("home.contact");
   const { handleSubmit, control, reset } = useForm<FormInputs>();
@@ -24,11 +26,11 @@ export const Contact = () => {
         message: data.message,
       });
       if (res) {
-        // toast.success(t('alerts.success'))
+        success(t("alerts.success"));
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        // toast.error(t('alerts.bad'))
+        warning(t("alerts.bad"));
       }
     } finally {
       reset();

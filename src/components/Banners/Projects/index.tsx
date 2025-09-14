@@ -1,56 +1,18 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-
-export interface ContentProject {
-  title: string;
-  paragraph: string;
-  skills: string[];
-  image: string;
-  url?: string;
-}
+import CardProject, { type ContentProjects } from "@/components/CardProject";
 
 export const Projects = () => {
   const t = useTranslations("home.projects");
-  const projects: ContentProject[] = t.raw("content");
+  const projects: ContentProjects[] = t.raw("content");
 
   return (
-    <article id="projects">
+    <article id="projects" className="content">
       <div>
         <div>
           <h3>{t("title")}</h3>
           <div className="projects">
-            {projects.map((data: ContentProject, i: number) => (
-              <div key={i} className="project-card">
-                <Image
-                  src={`/images/${data.image}.webp`}
-                  alt={data.title.toLocaleLowerCase()}
-                  width={1365}
-                  height={685}
-                  loading="lazy"
-                />
-                <div className="project-body">
-                  <a
-                    href={data.url}
-                    target="_blank"
-                    className={
-                      data.url &&
-                      "underline transition duration-300 ease-in-out hover:text-primary"
-                    }
-                  >
-                    {data.title}
-                  </a>
-                  <p>{data.paragraph}</p>
-                  <div className="skills">
-                    {data.skills.map((skill: string, j: number) => (
-                      <div className="tag" key={j}>
-                        {skill}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+            <CardProject projects={projects} />
           </div>
           <Link href="/projects" className="text-sm underline">
             {t("more")}

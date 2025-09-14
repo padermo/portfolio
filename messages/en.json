@@ -31,7 +31,8 @@
         "+3 years of experience developing digital solutions",
         "that transform ideas into functional products."
       ],
-      "cta": "view CV"
+      "cta": "view CV",
+      "alert": "Email copied!"
     },
     "experience": {
       "title": "Work Experience",
@@ -267,4 +268,3 @@
     }
   }
 }
-

@@ -2,16 +2,20 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Social from "@/components/Social";
+import { useAlert } from "@/context/AlertContext";
 
 const EMAIL = process.env.NEXT_PUBLIC_EMAIL as string;
 const CV = process.env.NEXT_PUBLIC_CV;
 
 export const Header = () => {
+  const { success } = useAlert();
+
   const t = useTranslations("home.header");
   const paragraphs: string[] = t.raw("paragraph");
 
   const copyClipboardEmail = () => {
     navigator.clipboard.writeText(EMAIL);
+    success(t("alert"));
   };
 
   return (
