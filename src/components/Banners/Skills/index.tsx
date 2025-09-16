@@ -19,6 +19,7 @@ export const Skills = ({ selectedSkill, handleSkill }: SkillsProps) => {
             {skills.map((skill: string, i: number) => (
               <button
                 key={i}
+                aria-label={skill}
                 className={
                   selectedSkill.includes(skill)
                     ? "text-primary"

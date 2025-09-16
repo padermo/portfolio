@@ -38,7 +38,11 @@ export const Header = () => {
             </div>
             <div className="social">
               <Social />
-              <button className="cta" onClick={copyClipboardEmail}>
+              <button
+                aria-label="email"
+                className="cta"
+                onClick={copyClipboardEmail}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

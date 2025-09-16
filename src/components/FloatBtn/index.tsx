@@ -33,7 +33,11 @@ export default function FloatBtn() {
 
   if (isView) {
     return (
-      <button className="float-btn" onClick={handleScrollTop}>
+      <button
+        aria-label="scroll to top"
+        className="float-btn"
+        onClick={handleScrollTop}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
