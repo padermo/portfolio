@@ -58,7 +58,6 @@ export const Contact = () => {
             <>
               <input
                 placeholder={t("inputs.email.placeholder")}
-                tabIndex={1}
                 inputMode="email"
                 autoComplete="email"
                 id="email"
@@ -86,7 +85,6 @@ export const Contact = () => {
             <>
               <input
                 placeholder={t("inputs.subject.placeholder")}
-                tabIndex={2}
                 inputMode="text"
                 id="subject"
                 value={field.value}
@@ -114,7 +112,6 @@ export const Contact = () => {
               <textarea
                 placeholder={t("inputs.message.placeholder")}
                 id="message"
-                tabIndex={3}
                 inputMode="text"
                 value={field.value}
                 onChange={field.onChange}
@@ -130,7 +127,12 @@ export const Contact = () => {
           )}
         />
 
-        <button onClick={onSubmit} type="submit" disabled={isLoading}>
+        <button
+          aria-label={t("button")}
+          onClick={onSubmit}
+          type="submit"
+          disabled={isLoading}
+        >
           {isLoading && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
