@@ -44,7 +44,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${poppins.variable} ${montserrat.variable} antialiased`}
+        className={`${poppins.variable} ${montserrat.variable} antialiased overflow-y-scroll scrollbar`}
       >
         <AlertProvider>
           <NextIntlClientProvider>

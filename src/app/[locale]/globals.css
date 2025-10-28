@@ -47,6 +47,30 @@ body {
   border-radius: 50px;
 }
 
+@layer utilities {
+  /* Scrollbar base */
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Track (fondo del scrollbar) */
+  .scrollbar::-webkit-scrollbar-track {
+    background-image: linear-gradient(#333, #222);
+  }
+
+  /* Thumb (la barra desplazable) */
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #010101;
+    border-radius: 9999px;
+  }
+
+  /* Thumb al hacer hover */
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #111;
+  }
+}
+
 @layer components {
   h1 {
     @apply text-4xl md:text-5xl font-bold font-poppins;

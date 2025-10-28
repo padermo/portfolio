@@ -18,6 +18,7 @@
         "id": "contact"
       }
     ],
+    "mobile": "Home",
     "lang": {
       "es": "Es",
       "en": "En"
@@ -67,14 +68,6 @@
           "paragraph": [
             "Contributed to the creation of key modules for a restaurant app.",
             "Development of components, routes, and global state management."
-          ]
-        },
-        {
-          "date": "December. 2016 - Present",
-          "roll": "Content Creator – YouTube",
-          "paragraph": [
-            "Creation of technology and gaming content, reaching an active digital community.",
-            "Experience in digital marketing, video editing, and audience management."
           ]
         }
       ]
@@ -197,6 +190,13 @@
           "image": "sanatorio-one"
         },
         {
+          "title": "Centro Médico - Sanatorio Colegiales",
+          "paragraph": "Implemented banners that stay true to the original design, optimizing images to improve the site’s performance and loading speed.",
+          "skills": ["Next JS", "React JS", "TypeScript", "Tailwind", "Git"],
+          "url": "https://centromedico.sanatoriocolegiales.com.ar/es",
+          "image": "centro-medico"
+        },
+        {
           "title": "Creative Tools",
           "paragraph": "Created a website to store and share resources for developers and designers, with favorites system, rating, advanced filtering, and intuitive modular organization.",
           "skills": [
@@ -255,6 +255,7 @@
             "Next Intl",
             "Git"
           ],
+          "url": "https://www.regionariovinos.com/es",
           "image": "regionario-one"
         },
         {
@@ -263,6 +264,19 @@
           "skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "Git"],
           "url": "https://www.bristolmedicine.com.ar/",
           "image": "bristol-one"
+        },
+        {
+          "title": "SetPro Landing",
+          "paragraph": "I developed the SetPro landing page, a mobile app for padel players and clubs, faithfully implementing the original design while optimizing performance, SEO, and visual experience using Radix UI.",
+          "skills": [
+            "Next JS",
+            "React JS",
+            "TypeScript",
+            "Tailwind",
+            "Git",
+            "Radix"
+          ],
+          "image": "setpro"
         }
       ]
     }

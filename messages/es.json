@@ -6,6 +6,7 @@
       { "text": "Sobre mi", "id": "about" },
       { "text": "Contacto", "id": "contact" }
     ],
+    "mobile": "Inicio",
     "lang": {
       "es": "Es",
       "en": "En"
@@ -55,14 +56,6 @@
           "paragraph": [
             "Contribuí en la creación de módulos clave para una app de restaurantes.",
             "Desarrollo de componentes, rutas y gestión de estados globales."
-          ]
-        },
-        {
-          "date": "Diciembre. 2016 - Actualidad",
-          "roll": "Creador de Contenido – YouTube",
-          "paragraph": [
-            "Creación de contenido de tecnología y gaming, alcanzando una comunidad digital activa.",
-            "Experiencia en marketing digital, edición de video y gestión de audiencia."
           ]
         }
       ]
@@ -185,6 +178,13 @@
           "image": "sanatorio-one"
         },
         {
+          "title": "Centro Médico - Sanatorio Colegiales",
+          "paragraph": "Implementé banners fieles al diseño original, optimizando imágenes para mejorar rendimiento y velocidad del sitio.",
+          "skills": ["Next JS", "React JS", "TypeScript", "Tailwind", "Git"],
+          "url": "https://centromedico.sanatoriocolegiales.com.ar/es",
+          "image": "centro-medico"
+        },
+        {
           "title": "Creative Tools",
           "paragraph": "Creé una web para almacenar y compartir recursos para desarrolladores y diseñadores, con sistema de favoritos, puntuación, filtrado avanzado y organización modular intuitiva.",
           "skills": [
@@ -243,6 +243,7 @@
             "Next Intl",
             "Git"
           ],
+          "url": "https://www.regionariovinos.com/es",
           "image": "regionario-one"
         },
         {
@@ -251,6 +252,19 @@
           "skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "Git"],
           "url": "https://www.bristolmedicine.com.ar/",
           "image": "bristol-one"
+        },
+        {
+          "title": "SetPro Landing",
+          "paragraph": "Desarrollé la landing page de SetPro, una aplicación móvil para jugadores y clubes de pádel, implementando fielmente el diseño original, optimizando el rendimiento, SEO y experiencia visual con Radix UI.",
+          "skills": [
+            "Next JS",
+            "React JS",
+            "TypeScript",
+            "Tailwind",
+            "Git",
+            "Radix"
+          ],
+          "image": "setpro"
         }
       ]
     }
