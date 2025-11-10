@@ -131,6 +131,7 @@ export const Contact = () => {
           aria-label={t("button")}
           onClick={onSubmit}
           type="submit"
+          className="button-primary"
           disabled={isLoading}
         >
           {isLoading && (

@@ -9,6 +9,7 @@ export default function Social() {
         href={GITHUB}
         target="_blank"
         rel="noopener noreferrer"
+        className="button-social"
         aria-label="Visit my Github profile"
       >
         <svg
@@ -31,6 +32,7 @@ export default function Social() {
         href={LINKEDIN}
         target="_blank"
         rel="noopener noreferrer"
+        className="button-social"
         aria-label="Visit my LinkedIn profile"
       >
         <svg

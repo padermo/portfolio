@@ -40,7 +40,7 @@ export const Header = () => {
               <Social />
               <button
                 aria-label="email"
-                className="cta"
+                className="button-secondary"
                 onClick={copyClipboardEmail}
               >
                 <svg
@@ -61,7 +61,7 @@ export const Header = () => {
                 </svg>
                 <span>{EMAIL}</span>
               </button>
-              <a href={CV} target="_blank" className="cta">
+              <a href={CV} target="_blank" className="button-secondary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

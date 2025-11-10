@@ -71,6 +71,18 @@ body {
   }
 }
 
+@utility button-social {
+  @apply cursor-pointer transition duration-300 ease-in-out hover:text-primary;
+}
+
+@utility button-primary {
+  @apply bg-primary rounded-md px-4 py-2 text-center flex flex-row-reverse items-center justify-center gap-3 text-background h-10 cursor-pointer hover:bg-primary-hover active:bg-primary-active disabled:bg-placeholder disabled:cursor-not-allowed;
+}
+
+@utility button-secondary {
+  @apply flex items-center justify-center gap-2 cursor-pointer rounded-md bg-dark-2 px-3 py-2 text-sm transition duration-300 ease-in-out hover:text-primary;
+}
+
 @layer components {
   h1 {
     @apply text-4xl md:text-5xl font-bold font-poppins;
@@ -99,10 +111,6 @@ body {
 
   textarea {
     @apply resize-none;
-  }
-
-  button[type="submit"] {
-    @apply bg-primary rounded-md text-center flex flex-row-reverse items-center justify-center gap-3 text-background h-10 cursor-pointer hover:bg-primary-hover active:bg-primary-active disabled:bg-placeholder disabled:cursor-not-allowed;
   }
 
   main {
@@ -174,15 +182,6 @@ body {
 
     .social {
       @apply flex flex-row items-center justify-center md:justify-start gap-4;
-
-      a,
-      button {
-        @apply cursor-pointer transition duration-300 ease-in-out hover:text-primary;
-      }
-
-      .cta {
-        @apply flex items-center gap-2 rounded-md bg-dark-2 px-3 py-2 text-sm;
-      }
     }
   }
 

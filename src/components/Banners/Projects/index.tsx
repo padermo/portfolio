@@ -14,9 +14,11 @@ export const Projects = () => {
           <div className="projects">
             <CardProject projects={projects} />
           </div>
-          <Link href="/projects" className="text-sm underline">
-            {t("more")}
-          </Link>
+          <div className="flex">
+            <Link href="/projects" className="button-primary">
+              {t("more")}
+            </Link>
+          </div>
         </div>
       </div>
     </article>
