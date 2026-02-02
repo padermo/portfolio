@@ -30,7 +30,7 @@ export const Header = () => {
           />
           <div>
             <h1>{t("title")}</h1>
-            <h2>{t("subtitle")}</h2>
+            <h2 className="break-keep">{t("subtitle")}</h2>
             <div>
               {paragraphs.map((text: string, i: number) => (
                 <p key={i}>{text}</p>

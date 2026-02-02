@@ -1,10 +1,22 @@
 {
   "navbar": {
     "menu": [
-      { "text": "Experiencia", "id": "experience" },
-      { "text": "Proyectos", "id": "projects" },
-      { "text": "Sobre mi", "id": "about" },
-      { "text": "Contacto", "id": "contact" }
+      {
+        "text": "Experiencia",
+        "id": "experience"
+      },
+      {
+        "text": "Proyectos",
+        "id": "projects"
+      },
+      {
+        "text": "Sobre mi",
+        "id": "about"
+      },
+      {
+        "text": "Contacto",
+        "id": "contact"
+      }
     ],
     "mobile": "Inicio",
     "lang": {
@@ -15,10 +27,9 @@
   "home": {
     "header": {
       "title": "Soy Fabio Estevez",
-      "subtitle": "Desarrollador Fullstack Web & Mobile",
+      "subtitle": "Desarrollador frontend enfocado en productos web escalables y de alto rendimiento",
       "paragraph": [
-        "+3 años de experiencia desarrollando soluciones",
-        "digitales que transforman ideas en productos funcionales."
+        "+3 años de experiencia trabajando en proyectos reales"
       ],
       "cta": "ver CV",
       "alert": "Email copiado!"
@@ -66,7 +77,7 @@
       "content": [
         {
           "title": "Sanatorio Colegiales",
-          "paragraph": "Implementé banners fieles al diseño original, rutas dinámicas, sistema de internacionalización y formularios avanzados, optimizando imágenes para mejorar rendimiento y velocidad del sitio.",
+          "paragraph": "Sitio institucional con rutas dinámicas e internacionalización, optimizado para rendimiento y velocidad.",
           "skills": [
             "Next JS",
             "React JS",
@@ -80,7 +91,7 @@
         },
         {
           "title": "Creative Tools",
-          "paragraph": "Creé una web para almacenar y compartir recursos para desarrolladores y diseñadores, con sistema de favoritos, puntuación, filtrado avanzado y organización modular intuitiva.",
+          "paragraph": "Plataforma web para descubrir y gestionar recursos creativos, con filtros avanzados y sistema de favoritos.",
           "skills": [
             "Next JS",
             "React JS",
@@ -103,8 +114,9 @@
     "about": {
       "title": "Sobre mi",
       "paragraph": [
-        "Mi nombre es Fabio Andrés. Mi camino con el código empezó a los 16 años y tomó una ruta inesperada a través del soporte técnico y la creación de videos para YouTube. Esa travesía, que enriqueció mi perspectiva, finalmente me guió de vuelta a mi meta original: ser un desarrollador que construye soluciones con el usuario siempre en mente.",
-        "Aquella experiencia me dotó de una comprensión única de las necesidades del usuario y la capacidad de comunicar ideas con claridad. Hoy, aplico esas lecciones en mi obsesión por crear software funcional e intuitivo, escribiendo código limpio y eficiente que resuelva problemas reales."
+        "Soy Fabio Andrés, desarrollador frontend con foco en crear soluciones centradas en el usuario.",
+        "Mi camino con el código comenzó a los 16 años y tomó una ruta poco convencional a través del soporte técnico y la creación de contenido para YouTube. Esa experiencia amplió mi perspectiva y fortaleció mi capacidad para entender problemas reales y comunicar ideas con claridad.",
+        "Hoy aplico todo ese aprendizaje en el desarrollo de software funcional e intuitivo, escribiendo código limpio, eficiente y orientado a resolver necesidades reales de las personas."
       ]
     },
     "contact": {
@@ -165,7 +177,7 @@
       "content": [
         {
           "title": "Sanatorio Colegiales",
-          "paragraph": "Implementé banners fieles al diseño original, rutas dinámicas, sistema de internacionalización y formularios avanzados, optimizando imágenes para mejorar rendimiento y velocidad del sitio.",
+          "paragraph": "Sitio institucional con rutas dinámicas e internacionalización, optimizado para rendimiento y velocidad.",
           "skills": [
             "Next JS",
             "React JS",
@@ -179,14 +191,20 @@
         },
         {
           "title": "Centro Médico - Sanatorio Colegiales",
-          "paragraph": "Implementé banners fieles al diseño original, optimizando imágenes para mejorar rendimiento y velocidad del sitio.",
-          "skills": ["Next JS", "React JS", "TypeScript", "Tailwind", "Git"],
+          "paragraph": "Web institucional optimizada, con foco en performance, velocidad de carga y fidelidad visual.",
+          "skills": [
+            "Next JS",
+            "React JS",
+            "TypeScript",
+            "Tailwind",
+            "Git"
+          ],
           "url": "https://centromedico.sanatoriocolegiales.com.ar/es",
           "image": "centro-medico"
         },
         {
           "title": "Creative Tools",
-          "paragraph": "Creé una web para almacenar y compartir recursos para desarrolladores y diseñadores, con sistema de favoritos, puntuación, filtrado avanzado y organización modular intuitiva.",
+          "paragraph": "Plataforma web para descubrir y gestionar recursos creativos, con filtros avanzados y sistema de favoritos.",
           "skills": [
             "Next JS",
             "React JS",
@@ -206,7 +224,7 @@
         },
         {
           "title": "Importaciones Printec",
-          "paragraph": "Desarrollé una app móvil que gestiona clientes, contratos, facturación automatizada y roles de usuario con autenticación segura, optimizando las operaciones de la empresa.",
+          "paragraph": "Aplicación móvil para la gestión interna de clientes, contratos y facturación automatizada.",
           "skills": [
             "React Native",
             "React JS",
@@ -225,14 +243,20 @@
         },
         {
           "title": "Analia Puentes",
-          "paragraph": "Diseñé e implementé una web presentacional basada en Figma, optimizando imágenes, rendimiento y posicionamiento para destacar su trayectoria profesional.",
-          "skills": ["Vite", "HTML", "Tailwind", "JavaScript", "Git"],
+          "paragraph": "Sitio web presentacional diseñado desde Figma, optimizado para rendimiento y posicionamiento profesional.",
+          "skills": [
+            "Vite",
+            "HTML",
+            "Tailwind",
+            "JavaScript",
+            "Git"
+          ],
           "url": "https://www.analiapuentes.com/",
           "image": "analia-one"
         },
         {
           "title": "Regionario",
-          "paragraph": "Desarrollé la web presentacional de vinos con diseño fiel en Illustrator, incorporando animaciones parallax, scrollspy y scroll suave para una experiencia fluida.",
+          "paragraph": "Web presentacional para bodega, con animaciones parallax y navegación fluida enfocada en storytelling.",
           "skills": [
             "Next JS",
             "React JS",
@@ -248,14 +272,20 @@
         },
         {
           "title": "Bristol Medicine",
-          "paragraph": "Colaboré en la web de Bristol Medicine implementando banners en Figma, formularios avanzados y optimización de imágenes y rendimiento del sitio.",
-          "skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "Git"],
+          "paragraph": "Sitio institucional desarrollado a partir de Figma, con formularios avanzados y optimización de rendimiento.",
+          "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap",
+            "Git"
+          ],
           "url": "https://www.bristolmedicine.com.ar/",
           "image": "bristol-one"
         },
         {
           "title": "SetPro Landing",
-          "paragraph": "Desarrollé la landing page de SetPro, una aplicación móvil para jugadores y clubes de pádel, implementando fielmente el diseño original, optimizando el rendimiento, SEO y experiencia visual con Radix UI.",
+          "paragraph": "Landing page para aplicación móvil de pádel, optimizada para SEO, rendimiento y experiencia visual.",
           "skills": [
             "Next JS",
             "React JS",

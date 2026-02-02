@@ -26,11 +26,10 @@
   },
   "home": {
     "header": {
-      "title": "I am Fabio Estevez",
-      "subtitle": "Fullstack Web & Mobile Developer",
+      "title": "I'm Fabio Estevez",
+      "subtitle": "Frontend developer focused on scalable, high performance web products",
       "paragraph": [
-        "+3 years of experience developing digital solutions",
-        "that transform ideas into functional products."
+        "+3 years of experience working on real world projects"
       ],
       "cta": "view CV",
       "alert": "Email copied!"
@@ -78,7 +77,7 @@
       "content": [
         {
           "title": "Sanatorio Colegiales",
-          "paragraph": "Implemented banners faithful to the original design, dynamic routes, internationalization system, and advanced forms, optimizing images to improve site performance and speed.",
+          "paragraph": "Institutional website with dynamic routes and internationalization, optimized for performance and speed.",
           "skills": [
             "Next JS",
             "React JS",
@@ -92,7 +91,7 @@
         },
         {
           "title": "Creative Tools",
-          "paragraph": "Created a website to store and share resources for developers and designers, with favorites system, rating, advanced filtering, and intuitive modular organization.",
+          "paragraph": "Web platform to discover and manage creative resources, featuring advanced filters and a favorites system.",
           "skills": [
             "Next JS",
             "React JS",
@@ -115,8 +114,9 @@
     "about": {
       "title": "About Me",
       "paragraph": [
-        "My name is Fabio Andrés. My journey with code started at 16 and took an unexpected path through technical support and creating YouTube videos. That journey, which enriched my perspective, eventually guided me back to my original goal: to be a developer who builds solutions with the user always in mind.",
-        "That experience gave me a unique understanding of user needs and the ability to communicate ideas clearly. Today, I apply those lessons in my obsession with creating functional and intuitive software, writing clean and efficient code that solves real problems."
+        "I’m Fabio Andrés, a frontend developer focused on building user-centered solutions.",
+        "My journey with code began at 16 and took an unconventional path through technical support and YouTube content creation. That experience broadened my perspective and strengthened my ability to understand real-world problems and communicate ideas clearly.",
+        "Today, I apply all of that learning to building functional and intuitive software, writing clean, efficient code aimed at solving real user needs."
       ]
     },
     "contact": {
@@ -177,7 +177,7 @@
       "content": [
         {
           "title": "Sanatorio Colegiales",
-          "paragraph": "Implemented banners faithful to the original design, dynamic routes, internationalization system, and advanced forms, optimizing images to improve site performance and speed.",
+          "paragraph": "Institutional website with dynamic routes and internationalization, optimized for performance and speed.",
           "skills": [
             "Next JS",
             "React JS",
@@ -191,14 +191,20 @@
         },
         {
           "title": "Centro Médico - Sanatorio Colegiales",
-          "paragraph": "Implemented banners that stay true to the original design, optimizing images to improve the site’s performance and loading speed.",
-          "skills": ["Next JS", "React JS", "TypeScript", "Tailwind", "Git"],
+          "paragraph": "Optimized institutional website, focused on performance, loading speed, and visual fidelity.",
+          "skills": [
+            "Next JS",
+            "React JS",
+            "TypeScript",
+            "Tailwind",
+            "Git"
+          ],
           "url": "https://centromedico.sanatoriocolegiales.com.ar/es",
           "image": "centro-medico"
         },
         {
           "title": "Creative Tools",
-          "paragraph": "Created a website to store and share resources for developers and designers, with favorites system, rating, advanced filtering, and intuitive modular organization.",
+          "paragraph": "Web platform to discover and manage creative resources, featuring advanced filters and a favorites system.",
           "skills": [
             "Next JS",
             "React JS",
@@ -218,7 +224,7 @@
         },
         {
           "title": "Importaciones Printec",
-          "paragraph": "Developed a mobile app that manages clients, contracts, automated invoicing, and user roles with secure authentication, optimizing company operations.",
+          "paragraph": "Mobile application for internal management of clients, contracts, and automated billing.",
           "skills": [
             "React Native",
             "React JS",
@@ -237,14 +243,20 @@
         },
         {
           "title": "Analia Puentes",
-          "paragraph": "Designed and implemented a presentation website based on Figma, optimizing images, performance, and SEO to highlight her professional career.",
-          "skills": ["Vite", "HTML", "Tailwind", "JavaScript", "Git"],
+          "paragraph": "Presentation website designed from Figma, optimized for performance and professional positioning.",
+          "skills": [
+            "Vite",
+            "HTML",
+            "Tailwind",
+            "JavaScript",
+            "Git"
+          ],
           "url": "https://www.analiapuentes.com/",
           "image": "analia-one"
         },
         {
           "title": "Regionario",
-          "paragraph": "Developed the presentation website for wines with a faithful design in Illustrator, incorporating parallax animations, scrollspy, and smooth scrolling for a fluid experience.",
+          "paragraph": "Presentation website for a winery, featuring parallax animations and smooth navigation focused on storytelling.",
           "skills": [
             "Next JS",
             "React JS",
@@ -260,14 +272,20 @@
         },
         {
           "title": "Bristol Medicine",
-          "paragraph": "Collaborated on the Bristol Medicine website implementing Figma banners, advanced forms, and optimization of images and site performance.",
-          "skills": ["HTML", "CSS", "JavaScript", "Bootstrap", "Git"],
+          "paragraph": "Institutional website developed from Figma, featuring advanced forms and performance optimization.",
+          "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap",
+            "Git"
+          ],
           "url": "https://www.bristolmedicine.com.ar/",
           "image": "bristol-one"
         },
         {
           "title": "SetPro Landing",
-          "paragraph": "I developed the SetPro landing page, a mobile app for padel players and clubs, faithfully implementing the original design while optimizing performance, SEO, and visual experience using Radix UI.",
+          "paragraph": "Landing page for a padel mobile application, optimized for SEO, performance, and visual experience.",
           "skills": [
             "Next JS",
             "React JS",
