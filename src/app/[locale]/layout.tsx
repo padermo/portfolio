@@ -5,8 +5,10 @@ import { routing } from "@/i18n/routing";
 import { Poppins, Montserrat } from "next/font/google";
 import FloatBtn from "@/components/FloatBtn";
 import "./globals.css";
-import { Contact, Network } from "@/components/Banners";
 import { AlertProvider } from "@/context/AlertContext";
+import SmoothScroll from "@/components/SmoothScroll";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -48,16 +50,13 @@ export default async function RootLayout({
       >
         <AlertProvider>
           <NextIntlClientProvider>
-            {children}
-            <footer>
-              <div>
-                <div>
-                  <Contact />
-                  <Network />
-                </div>
-              </div>
-            </footer>
+            <Navbar />
+            <main>
+              {children}
+            </main>
+            <Footer />
             <FloatBtn />
+            <SmoothScroll />
           </NextIntlClientProvider>
         </AlertProvider>
       </body>

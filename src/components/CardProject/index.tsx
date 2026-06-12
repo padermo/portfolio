@@ -22,9 +22,10 @@ export default function CardProject({ projects, selectedSkill }: Props) {
           <Image
             src={`/images/${data.image}.webp`}
             alt={data.title.toLocaleLowerCase()}
-            width={1365}
-            height={685}
+            width={768}
+            height={390}
             loading="lazy"
+            sizes="(max-width: 1024px) 288px, 768px"
             className="w-full h-full transition-transform duration-500 ease-in-out rounded-lg shadow-lg shadow-background/50 lg:group-hover:scale-105 lg:rounded-none lg:shadow-none"
           />
 
