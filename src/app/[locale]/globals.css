@@ -119,7 +119,7 @@ body {
   }
 
   nav {
-    @apply flex flex-col md:flex-row py-4 md:py-0 w-full md:justify-center;
+    @apply flex flex-col md:flex-row px-4 lg:px-0 py-4 md:py-0 w-full md:justify-center;
 
     .desktop {
       @apply hidden md:flex fixed top-3 w-auto shadow-md shadow-background/50 backdrop-blur-lg rounded-lg m-auto bg-background/50 gap-4 items-center py-4 px-6 z-10;
