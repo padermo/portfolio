@@ -6,12 +6,12 @@
         "id": "experience"
       },
       {
-        "text": "Projects",
-        "id": "projects"
-      },
-      {
         "text": "About Me",
         "id": "about"
+      },
+      {
+        "text": "Projects",
+        "id": "projects"
       },
       {
         "text": "Contact",
@@ -32,6 +32,7 @@
         "+3 years of experience working on real world projects"
       ],
       "cta": "view CV",
+      "email": "copy email",
       "alert": "Email copied!"
     },
     "experience": {

@@ -1,22 +1,15 @@
-"use client";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Social from "@/components/Social";
-import { useAlert } from "@/context/AlertContext";
+import EmailButton from "@/components/EmailButton";
+import Link from "next/link";
 
 const EMAIL = process.env.NEXT_PUBLIC_EMAIL as string;
-const CV = process.env.NEXT_PUBLIC_CV;
+const CV = "/docs/Fabio_Estevez_CV_Frontend_Developer.pdf";
 
 export const Header = () => {
-  const { success } = useAlert();
-
   const t = useTranslations("home.header");
   const paragraphs: string[] = t.raw("paragraph");
-
-  const copyClipboardEmail = () => {
-    navigator.clipboard.writeText(EMAIL);
-    success(t("alert"));
-  };
 
   return (
     <article id="header">
@@ -25,8 +18,10 @@ export const Header = () => {
           <Image
             src="/images/profile.webp"
             alt="Fabio Estevez"
-            width={958}
-            height={1042}
+            width={250}
+            height={250}
+            priority
+            fetchPriority="high"
           />
           <div>
             <h1>{t("title")}</h1>
@@ -38,30 +33,8 @@ export const Header = () => {
             </div>
             <div className="social">
               <Social />
-              <button
-                aria-label="email"
-                className="button-secondary"
-                onClick={copyClipboardEmail}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="icon icon-tabler icons-tabler-outline icon-tabler-mail"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-                  <path d="M3 7l9 6l9 -6" />
-                </svg>
-                <span>{EMAIL}</span>
-              </button>
-              <a href={CV} target="_blank" className="button-secondary">
+              <EmailButton textAlert={t("alert")} email={EMAIL} textButton={t("email")} />
+              <Link href={CV} target="_blank" className="button-secondary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -79,7 +52,7 @@ export const Header = () => {
                   <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
                 </svg>
                 <span>{t("cta")}</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
