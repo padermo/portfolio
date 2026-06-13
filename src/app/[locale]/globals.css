@@ -130,7 +130,7 @@ body {
     }
 
     .mobile {
-      @apply relative w-full;
+      @apply relative z-100 w-full;
 
       div {
         @apply absolute top-0 left-0 w-full flex md:hidden flex-col gap-2 p-2 justify-start items-start rounded-md backdrop-blur-lg bg-background/50 transition-all duration-300 ease-in-out;
