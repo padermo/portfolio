@@ -1,6 +1,6 @@
 "use client";
 import Alert from "@/components/Alert";
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, use, useMemo, useCallback, useState, useEffect } from "react";
 
 type AlertType = "success" | "error" | "info";
 
@@ -23,16 +23,12 @@ export const AlertProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const [alert, setAlert] = useState<AlertProps | null>(null);
 
-  const show = (type: AlertType, text: string, duration = 3000) => {
-    setAlert({ type, text, duration });
-  };
-
-  const success = (text: string, duration?: number) =>
-    show("success", text, duration);
-  const warning = (text: string, duration?: number) =>
-    show("error", text, duration);
-  const info = (text: string, duration?: number) =>
-    show("info", text, duration);
+  const show = useCallback(
+    (type: AlertType, text: string, duration = 3000) => {
+      setAlert({ type, text, duration });
+    },
+    []
+  );
 
   // Cierra el alert automáticamente
   useEffect(() => {
@@ -46,8 +42,22 @@ export const AlertProvider: React.FC<{ children: React.ReactNode }> = ({
     return () => clearTimeout(timer);
   }, [alert]);
 
+  const value = useMemo(
+    () => ({
+      success: (text: string, duration?: number) =>
+        show("success", text, duration),
+
+      warning: (text: string, duration?: number) =>
+        show("error", text, duration),
+
+      info: (text: string, duration?: number) =>
+        show("info", text, duration),
+    }),
+    [show]
+  );
+
   return (
-    <AlertContext.Provider value={{ success, warning, info }}>
+    <AlertContext.Provider value={value}>
       {children}
       {alert && <Alert type={alert.type} text={alert.text} />}
     </AlertContext.Provider>
@@ -55,7 +65,7 @@ export const AlertProvider: React.FC<{ children: React.ReactNode }> = ({
 };
 
 export const useAlert = () => {
-  const ctx = useContext(AlertContext);
+  const ctx = use(AlertContext);
   if (!ctx) throw new Error("useAlert must be used inside AlertProvider");
   return ctx;
 };

@@ -9,7 +9,6 @@ const CV = "/docs/Fabio_Estevez_CV_Frontend_Developer.pdf";
 
 export const Header = () => {
   const t = useTranslations("home.header");
-  const paragraphs: string[] = t.raw("paragraph");
 
   return (
     <article id="header">
@@ -27,9 +26,7 @@ export const Header = () => {
             <h1>{t("title")}</h1>
             <h2 className="break-keep">{t("subtitle")}</h2>
             <div>
-              {paragraphs.map((text: string, i: number) => (
-                <p key={i}>{text}</p>
-              ))}
+              <p>{t("paragraph")}</p>
             </div>
             <div className="social">
               <Social />

@@ -16,10 +16,11 @@ export const Skills = ({ selectedSkill, handleSkill }: SkillsProps) => {
           <h3>{t("title")}</h3>
           <p>{t("paragraph")}</p>
           <div className="skill-options">
-            {skills.map((skill: string, i: number) => (
+            {skills.map((skill: string) => (
               <button
-                key={i}
+                key={skill}
                 aria-label={skill}
+                type="button"
                 className={
                   selectedSkill.includes(skill)
                     ? "text-primary"

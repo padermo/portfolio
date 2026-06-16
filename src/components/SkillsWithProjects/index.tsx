@@ -1,19 +1,22 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Skills, AllProjects } from "../Banners";
+import { Skills } from "../Banners/Skills";
+import { AllProjects } from "../Banners/AllProjects";
 
 export default function SkillsWithProjects() {
-  const [selectedSkill, setSelectedSkill] = useState<string[]>([]);
+  const [selectedSkill, setSelectedSkill] = useState<string[]>(() => {
+    if (typeof window === "undefined") {
+      return [];
+    }
 
-  // recupera al cargar
-  useEffect(() => {
-    const stored = JSON.parse(localStorage.getItem("skills") || "[]");
-    setSelectedSkill(stored);
-  }, []);
+    return JSON.parse(
+      localStorage.getItem("skills:v1") || "[]"
+    );
+  });
 
   // guarda al cambiar
   useEffect(() => {
-    localStorage.setItem("skills", JSON.stringify(selectedSkill));
+    localStorage.setItem("skills:v1", JSON.stringify(selectedSkill));
   }, [selectedSkill]);
 
   // setear el estado al click

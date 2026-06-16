@@ -28,9 +28,7 @@
     "header": {
       "title": "Soy Fabio Estevez",
       "subtitle": "Desarrollador frontend enfocado en productos web escalables y de alto rendimiento",
-      "paragraph": [
-        "+3 años de experiencia trabajando en proyectos reales"
-      ],
+      "paragraph": "+3 años de experiencia trabajando en proyectos reales",
       "cta": "ver CV",
       "email": "copiar email",
       "alert": "Email copiado!"
@@ -39,35 +37,63 @@
       "title": "Experiencia Laboral",
       "content": [
         {
+          "id": "Sira Agency",
           "date": "Octubre. 2024 – Actualidad",
           "roll": "Desarrollador Frontend – Sira Agency",
           "paragraph": [
-            "Implementación de sitios web modernos y responsivos para clientes de distintos sectores.",
-            "Optimización SEO y rendimiento para mejorar la experiencia del usuario."
+            {
+              "id": 1,
+              "text": "Implementación de sitios web modernos y responsivos para clientes de distintos sectores."
+            },
+            {
+              "id": 2,
+              "text": "Optimización SEO y rendimiento para mejorar la experiencia del usuario."
+            }
           ]
         },
         {
+          "id": "Importaciones Printec",
           "date": "Mayo. 2023 – Enero. 2024",
           "roll": "Desarrollador Frontend – Importaciones Printec",
           "paragraph": [
-            "Desarrollo de una app móvil para sistematizar operaciones internas.",
-            "Diseñé y estructuré la interfaz completa del cliente."
+            {
+              "id": 1,
+              "text": "Desarrollo de una app móvil para sistematizar operaciones internas."
+            },
+            {
+              "id": 2,
+              "text": "Diseñé y estructuré la interfaz completa del cliente."
+            }
           ]
         },
         {
+          "id": "Blacklab Agency",
           "date": "Abril. 2023 – Enero. 2024",
           "roll": "Desarrollador Frontend – Blacklab Agency",
           "paragraph": [
-            "Participación en la creación del portal web de un sanatorio en Argentina.",
-            "Implementación de internacionalización, formularios y optimización de recursos visuales."
+            {
+              "id": 1,
+              "text": "Participación en la creación del portal web de un sanatorio en Argentina."
+            },
+            {
+              "id": 2,
+              "text": "Implementación de internacionalización, formularios y optimización de recursos visuales."
+            }
           ]
         },
         {
+          "id": "Half App",
           "date": "Marzo. 2023 – Abril. 2023",
           "roll": "Desarrollador Frontend – Half App",
           "paragraph": [
-            "Contribuí en la creación de módulos clave para una app de restaurantes.",
-            "Desarrollo de componentes, rutas y gestión de estados globales."
+            {
+              "id": 1,
+              "text": "Contribuí en la creación de módulos clave para una app de restaurantes."
+            },
+            {
+              "id": 2,
+              "text": "Desarrollo de componentes, rutas y gestión de estados globales."
+            }
           ]
         }
       ]
@@ -115,9 +141,18 @@
     "about": {
       "title": "Sobre mi",
       "paragraph": [
-        "Soy Fabio Andrés, desarrollador frontend con foco en crear soluciones centradas en el usuario.",
-        "Mi camino con el código comenzó a los 16 años y tomó una ruta poco convencional a través del soporte técnico y la creación de contenido para YouTube. Esa experiencia amplió mi perspectiva y fortaleció mi capacidad para entender problemas reales y comunicar ideas con claridad.",
-        "Hoy aplico todo ese aprendizaje en el desarrollo de software funcional e intuitivo, escribiendo código limpio, eficiente y orientado a resolver necesidades reales de las personas."
+        {
+          "id": 1,
+          "text": "Soy Fabio Andrés, desarrollador frontend con foco en crear soluciones centradas en el usuario."
+        },
+        {
+          "id": 2,
+          "text": "Mi camino con el código comenzó a los 16 años y tomó una ruta poco convencional a través del soporte técnico y la creación de contenido para YouTube. Esa experiencia amplió mi perspectiva y fortaleció mi capacidad para entender problemas reales y comunicar ideas con claridad."
+        },
+        {
+          "id": 3,
+          "text": "Hoy aplico todo ese aprendizaje en el desarrollo de software funcional e intuitivo, escribiendo código limpio, eficiente y orientado a resolver necesidades reales de las personas."
+        }
       ]
     },
     "contact": {
