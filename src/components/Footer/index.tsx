@@ -1,4 +1,5 @@
-import { Contact, Network } from "../Banners";
+import { Contact } from "../Banners/Contact";
+import { Network } from "../Banners/Network";
 
 export default function Footer() {
   return (

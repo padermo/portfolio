@@ -28,9 +28,7 @@
     "header": {
       "title": "I'm Fabio Estevez",
       "subtitle": "Frontend developer focused on scalable, high performance web products",
-      "paragraph": [
-        "+3 years of experience working on real world projects"
-      ],
+      "paragraph": "+3 years of experience working on real world projects",
       "cta": "view CV",
       "email": "copy email",
       "alert": "Email copied!"
@@ -39,35 +37,63 @@
       "title": "Work Experience",
       "content": [
         {
+          "id": "Sira Agency",
           "date": "October. 2024 – Present",
           "roll": "Frontend Developer – Sira Agency",
           "paragraph": [
-            "Implementation of modern and responsive websites for clients from various sectors.",
-            "SEO and performance optimization to improve user experience."
+            {
+              "id": 1,
+              "text": "Implementation of modern and responsive websites for clients from various sectors."
+            },
+            {
+              "id": 2,
+              "text": "SEO and performance optimization to improve user experience."
+            }
           ]
         },
         {
+          "id": "Importaciones Printec",
           "date": "May. 2023 – January. 2024",
           "roll": "Frontend Developer – Importaciones Printec",
           "paragraph": [
-            "Development of a mobile app to systematize internal operations.",
-            "Designed and structured the complete client interface."
+            {
+              "id": 1,
+              "text": "Development of a mobile app to systematize internal operations."
+            },
+            {
+              "id": 2,
+              "text": "Designed and structured the complete client interface."
+            }
           ]
         },
         {
+          "id": "Blacklab Agency",
           "date": "April. 2023 – January. 2024",
           "roll": "Frontend Developer – Blacklab Agency",
           "paragraph": [
-            "Participation in the creation of a healthcare portal in Argentina.",
-            "Implementation of internationalization, forms, and optimization of visual resources."
+            {
+              "id": 1,
+              "text": "Participation in the creation of a healthcare portal in Argentina."
+            },
+            {
+              "id": 2,
+              "text": "Implementation of internationalization, forms, and optimization of visual resources."
+            }
           ]
         },
         {
+          "id": "Half App",
           "date": "March. 2023 – April. 2023",
           "roll": "Frontend Developer – Half App",
           "paragraph": [
-            "Contributed to the creation of key modules for a restaurant app.",
-            "Development of components, routes, and global state management."
+            {
+              "id": 1,
+              "text": "Contributed to the creation of key modules for a restaurant app."
+            },
+            {
+              "id": 2,
+              "text": "Development of components, routes, and global state management."
+            }
           ]
         }
       ]
@@ -115,9 +141,18 @@
     "about": {
       "title": "About Me",
       "paragraph": [
-        "I’m Fabio Andrés, a frontend developer focused on building user-centered solutions.",
-        "My journey with code began at 16 and took an unconventional path through technical support and YouTube content creation. That experience broadened my perspective and strengthened my ability to understand real-world problems and communicate ideas clearly.",
-        "Today, I apply all of that learning to building functional and intuitive software, writing clean, efficient code aimed at solving real user needs."
+        {
+          "id": 1,
+          "text": "I’m Fabio Andrés, a frontend developer focused on building user-centered solutions."
+        },
+        {
+          "id": 2,
+          "text": "My journey with code began at 16 and took an unconventional path through technical support and YouTube content creation. That experience broadened my perspective and strengthened my ability to understand real-world problems and communicate ideas clearly."
+        },
+        {
+          "id": 3,
+          "text": "Today, I apply all of that learning to building functional and intuitive software, writing clean, efficient code aimed at solving real user needs."
+        }
       ]
     },
     "contact": {

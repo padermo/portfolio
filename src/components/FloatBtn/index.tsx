@@ -1,33 +1,28 @@
 "use client";
 import { useEffect, useState } from "react";
 
+const handleScrollTop = () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+};
+
 export default function FloatBtn() {
   const [isView, setIsView] = useState<boolean>(false);
 
-  const handleScrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-
-  const ButtonIsVisible = () => {
-    const valueScrollY = window.scrollY;
-    if (valueScrollY >= 550) {
-      setIsView(true);
-    } else {
-      setIsView(false);
-    }
+  const buttonIsVisible = () => {
+    setIsView(window.scrollY >= 550);
   };
 
   useEffect(() => {
-    ButtonIsVisible();
+    buttonIsVisible();
 
-    window.addEventListener("scroll", ButtonIsVisible);
+    window.addEventListener("scroll", buttonIsVisible, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", ButtonIsVisible);
+      window.removeEventListener("scroll", buttonIsVisible);
     };
   }, []);
 
@@ -35,6 +30,7 @@ export default function FloatBtn() {
     return (
       <button
         aria-label="scroll to top"
+        type="button"
         className="float-btn"
         onClick={handleScrollTop}
       >

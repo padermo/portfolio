@@ -17,6 +17,7 @@ export default function EmailButton({ textAlert, textButton, email }: Props) {
   return (
     <button
       aria-label="email"
+      type="button"
       className="button-secondary"
       onClick={copyClipboardEmail}
     >

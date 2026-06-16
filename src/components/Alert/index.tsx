@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
-import { AlertProps } from "@/context/AlertContext";
+import type { AlertProps } from "@/context/AlertContext";
 
-interface Props extends AlertProps {}
+interface Props extends AlertProps { }
 
 export default function Alert({ type, text }: Props) {
   return (

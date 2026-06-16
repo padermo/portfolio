@@ -6,19 +6,26 @@ export default function SmoothScroll() {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2, // desplazamiento (tiempo en segundos)
-      lerp: 0.08, // suavizado
-      touchMultiplier: 1.2, //sensibilidad touch
-      smoothWheel: true, // suavizado mouse
-      wheelMultiplier: 1, // sensibilidad mouse
+      duration: 1.2,
+      lerp: 0.08,
+      touchMultiplier: 1.2,
+      smoothWheel: true,
+      wheelMultiplier: 1,
     });
 
-    function raf(time: any) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    let rafId: number;
 
-    requestAnimationFrame(raf);
+    const raf = (time: number) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    };
+
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
   }, []);
 
   return null;

@@ -1,8 +1,13 @@
 import { useTranslations } from "next-intl";
 
+interface Data {
+  id: number;
+  text: string;
+}
+
 export const About = () => {
   const t = useTranslations("home.about");
-  const paragraphs: string[] = t.raw("paragraph");
+  const paragraphs: Data[] = t.raw("paragraph");
 
   return (
     <article id="about">
@@ -10,8 +15,8 @@ export const About = () => {
         <div>
           <h3>{t("title")}</h3>
           <div>
-            {paragraphs.map((text: string, i: number) => (
-              <p key={i} className="mb-2">
+            {paragraphs.map(({ id, text }) => (
+              <p key={id} className="mb-2">
                 {text}
               </p>
             ))}

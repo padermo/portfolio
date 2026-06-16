@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { usePathname, Link } from "@/i18n/navigation";
 import { ScrollSection } from "@/utils/scroll";
-import { Home } from "../Svg";
+import { Home } from "../Svg/Home/";
 import type { NavMenu } from ".";
 
 interface Props {
@@ -20,6 +20,7 @@ export default function NavbarClient({ menu, mobile }: Props) {
         <button
           key={opt.id}
           aria-label={opt.text}
+          type="button"
           onClick={() => ScrollSection(opt.id)}
         >
           {opt.text}
@@ -39,7 +40,7 @@ export default function NavbarClient({ menu, mobile }: Props) {
     <nav>
       <div className="desktop">{generateOptions()}</div>
       <div className="menu">
-        <button aria-label="menu" onClick={() => setIsView(!isView)}>
+        <button aria-label="menu" type="button" onClick={() => setIsView(!isView)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"

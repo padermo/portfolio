@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import axios from "axios";
 import { useAlert } from "@/context/AlertContext";
 import type { Alerts, Inputs } from "./contact.types";
 
@@ -26,20 +25,27 @@ export const ContactClient = ({ title, inputs, alerts, button }: Props) => {
   const onSubmit = handleSubmit(async (data) => {
     try {
       setIsLoading(true);
-      const res = await axios.post("/api/send", {
-        email: data.email,
-        subject: data.subject,
-        message: data.message,
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        }),
       });
-      if (res) {
-        success(alerts.success);
+
+      if (!res.ok) {
+        throw new Error("Failed to send email");
       }
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        warning(alerts.bad);
-      }
-    } finally {
+
+      success(alerts.success);
       reset();
+    } catch (error) {
+      warning(alerts.bad);
+    } finally {
       setIsLoading(false);
     }
   });

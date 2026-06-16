@@ -1,9 +1,15 @@
 import { useTranslations } from "next-intl";
 
+interface Paragraphs {
+  id: number;
+  text: string;
+}
+
 interface CardExperience {
+  id: string;
   date: string;
   roll: string;
-  paragraph: string[];
+  paragraph: Paragraphs[];
 }
 
 export const Experience = () => {
@@ -16,13 +22,13 @@ export const Experience = () => {
         <div>
           <h3>{t("title")}</h3>
           <div className="timeline">
-            {experience.map((card: CardExperience, i: number) => (
-              <div className="card" key={i}>
+            {experience.map((card: CardExperience) => (
+              <div className="card" key={card.id}>
                 <p className="date">{card.date}</p>
                 <h4>{card.roll}</h4>
                 <div>
-                  {card.paragraph.map((text: string, j: number) => (
-                    <p key={j}>{text}</p>
+                  {card.paragraph.map(({ id, text }) => (
+                    <p key={id}>{text}</p>
                   ))}
                 </div>
               </div>

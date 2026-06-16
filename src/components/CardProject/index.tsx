@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { External } from "../Svg";
+import { External } from "../Svg/External/";
 
 export interface ContentProjects {
   title: string;
@@ -17,8 +17,8 @@ interface Props {
 export default function CardProject({ projects, selectedSkill }: Props) {
   return (
     <>
-      {projects.map((data: ContentProjects, i: number) => (
-        <article key={i} className="group relative overflow-hidden mb-8 lg:mb-4 lg:rounded-lg lg:shadow-lg lg:shadow-background/50">
+      {projects.map((data: ContentProjects) => (
+        <article key={data.title} className="group relative overflow-hidden mb-8 lg:mb-4 lg:rounded-lg lg:shadow-lg lg:shadow-background/50">
           <Image
             src={`/images/${data.image}.webp`}
             alt={data.title.toLocaleLowerCase()}
@@ -54,10 +54,10 @@ export default function CardProject({ projects, selectedSkill }: Props) {
               </div>
               <p className="text-base">{data.paragraph}</p>
               <div className="flex w-full gap-1 flex-wrap justify-start mt-2">
-                {data.skills.map((skill: string, j: number) => (
+                {data.skills.map((skill: string) => (
                   <div
                     className={`text-center mx-0 w-auto rounded-sm py-1 px-2 text-xs ${selectedSkill?.includes(skill) ? "text-black bg-primary" : "bg-dark-2 text-foreground"}`}
-                    key={j}
+                    key={skill}
                   >
                     {skill}
                   </div>
