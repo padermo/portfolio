@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import NavbarClient from "./navbarClient";
+import NavbarCombine from "./navbarCombine";
 
 export interface NavMenu {
   text: string;
@@ -8,7 +8,7 @@ export interface NavMenu {
 
 export default async function Navbar() {
   const t = await getTranslations("navbar");
-  const menu: NavMenu[] = t.raw("menu");
+  const menu: NavMenu[] = t.raw("home");
 
-  return <NavbarClient menu={menu} mobile={t("mobile")} />
+  return <NavbarCombine menu={menu} />
 }

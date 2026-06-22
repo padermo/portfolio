@@ -1,21 +1,24 @@
-import { useTranslations } from "next-intl";
 import CardProject, { type ContentProjects } from "@/components/CardProject";
+import Heading from "@/components/UI/Heading";
 
-interface Props {
+export interface ProjectsData {
+  title: string;
+  content: ContentProjects[]
+}
+
+interface Props extends ProjectsData {
   selectedSkill: string[];
 }
 
-export const AllProjects = ({ selectedSkill }: Props) => {
-  const t = useTranslations("projects.allProjects");
-  const projects: ContentProjects[] = t.raw("content");
+export const AllProjects = ({ title, content, selectedSkill }: Props) => {
 
   return (
-    <section id="allProjects">
-      <div>
+    <section className="py-10">
+      <div className="w-full lg:w-3xl mx-auto">
         <div>
-          <h3>{t("title")}</h3>
+          <Heading as="h3" text={title} />
           <div className="all-projects">
-            <CardProject projects={projects} selectedSkill={selectedSkill} />
+            <CardProject projects={content} selectedSkill={selectedSkill} />
           </div>
         </div>
       </div>

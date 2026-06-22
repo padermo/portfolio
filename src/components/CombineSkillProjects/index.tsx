@@ -1,9 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Skills } from "../Banners/Skills";
-import { AllProjects } from "../Banners/AllProjects";
+import { Skills, type SkillsData } from "../Banners/Skills";
+import { AllProjects, type ProjectsData } from "../Banners/AllProjects";
 
-export default function SkillsWithProjects() {
+interface Props {
+  skills: SkillsData
+  projects: ProjectsData
+}
+
+export default function CombineSkillProjects({ skills, projects }: Props) {
   const [selectedSkill, setSelectedSkill] = useState<string[]>(() => {
     if (typeof window === "undefined") {
       return [];
@@ -28,8 +33,8 @@ export default function SkillsWithProjects() {
 
   return (
     <>
-      <Skills selectedSkill={selectedSkill} handleSkill={handleSkill} />
-      <AllProjects selectedSkill={selectedSkill} />
+      <Skills title={skills.title} paragraph={skills.paragraph} skills={skills.skills} selectedSkill={selectedSkill} handleSkill={handleSkill} />
+      <AllProjects title={projects.title} content={projects.content} selectedSkill={selectedSkill} />
     </>
   );
 }

@@ -31,7 +31,7 @@ export default function FloatBtn() {
       <button
         aria-label="scroll to top"
         type="button"
-        className="float-btn"
+        className="fixed flex bottom-6 right-6 w-10 h-10 rounded-full backdrop-blur-lg bg-background/50 justify-center items-center p-2 shadow-md shadow-background/50 cursor-pointer"
         onClick={handleScrollTop}
       >
         <svg

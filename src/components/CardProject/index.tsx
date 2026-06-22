@@ -18,18 +18,18 @@ export default function CardProject({ projects, selectedSkill }: Props) {
   return (
     <>
       {projects.map((data: ContentProjects) => (
-        <article key={data.title} className="group relative overflow-hidden mb-8 lg:mb-4 lg:rounded-lg lg:shadow-lg lg:shadow-background/50">
+        <article key={data.title} className="project-card relative overflow-hidden mb-8 lg:mb-4 lg:rounded-lg lg:shadow-lg lg:shadow-background/50">
           <Image
             src={`/images/${data.image}.webp`}
-            alt={data.title.toLocaleLowerCase()}
+            alt={data.title}
             width={768}
             height={390}
             loading="lazy"
             sizes="(max-width: 1024px) 288px, 768px"
-            className="w-full h-full transition-transform duration-500 ease-in-out rounded-lg shadow-lg shadow-background/50 lg:group-hover:scale-105 lg:rounded-none lg:shadow-none"
+            className="w-full h-full transition-transform duration-500 ease-in-out rounded-lg shadow-lg shadow-background/50 project-image lg:rounded-none lg:shadow-none"
           />
 
-          <div className="lg:absolute transition-transform duration-300 ease-in-out lg:translate-y-full group-hover:lg:translate-y-0 lg:rounded-lg lg:inset-0 lg:h-full p-4 lg:bg-gradient-to-t lg:from-black/60 lg:to-black/60">
+          <div className="lg:absolute transition-transform duration-300 ease-in-out project-overlay lg:rounded-lg lg:inset-0 lg:h-full py-2 lg:bg-gradient-to-t lg:from-black/60 lg:to-black/60">
             <a
               href={data.url}
               target="_blank"
