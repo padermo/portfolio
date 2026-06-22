@@ -10,7 +10,7 @@ export const Home = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="icon icon-tabler icons-tabler-outline icon-tabler-home hidden md:block"
+      className="icon icon-tabler icons-tabler-outline icon-tabler-home block"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M5 12l-2 0l9 -9l9 9l-2 0" />

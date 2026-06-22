@@ -1,3 +1,5 @@
+import Heading from "@/components/UI/Heading";
+import Paragraph from "@/components/UI/Paragraph";
 import { useTranslations } from "next-intl";
 
 interface Paragraphs {
@@ -17,18 +19,18 @@ export const Experience = () => {
   const experience: CardExperience[] = t.raw("content");
 
   return (
-    <article id="experience">
-      <div>
+    <article id="experience" className="py-5 md:py-10">
+      <div className="w-full lg:w-3xl mx-auto">
         <div>
-          <h3>{t("title")}</h3>
-          <div className="timeline">
+          <Heading as="h3" text={t("title")} />
+          <div className="border-l border-l-placeholder">
             {experience.map((card: CardExperience) => (
-              <div className="card" key={card.id}>
-                <p className="date">{card.date}</p>
-                <h4>{card.roll}</h4>
+              <div className="card py-3 px-4 relative" key={card.id}>
+                <Paragraph text={card.date} className="text-sm!" />
+                <Heading as="h4" text={card.roll} />
                 <div>
                   {card.paragraph.map(({ id, text }) => (
-                    <p key={id}>{text}</p>
+                    <Paragraph key={id} text={text} />
                   ))}
                 </div>
               </div>

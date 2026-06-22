@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "menu": [
+    "home": [
       {
         "text": "Experiencia",
         "id": "experience"
@@ -18,7 +18,10 @@
         "id": "contact"
       }
     ],
-    "mobile": "Inicio",
+    "projects": {
+      "text": "Inicio",
+      "id": "home"
+    },
     "lang": {
       "es": "Es",
       "en": "En"

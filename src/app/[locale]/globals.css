@@ -30,9 +30,9 @@ body {
     linear-gradient(#222222, #222222);
   color: var(--foreground);
   font-family: var(--font-montserrat);
-  position: relative;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  position: relative;
+  grid-template-rows: 1fr auto;
   min-height: 100dvh;
 }
 
@@ -85,25 +85,6 @@ body {
 }
 
 @layer components {
-  h1 {
-    @apply text-4xl md:text-5xl font-bold font-poppins;
-  }
-
-  h2 {
-    @apply text-primary text-xl md:text-2xl font-medium font-poppins break-all text-wrap;
-  }
-
-  h3 {
-    @apply text-xl md:text-3xl font-medium font-poppins mb-4;
-  }
-
-  h4 {
-    @apply text-primary font-bold font-poppins text-lg;
-  }
-
-  p {
-    @apply inline-block;
-  }
 
   input,
   textarea {
@@ -113,192 +94,18 @@ body {
   textarea {
     @apply resize-none;
   }
+}
 
-  main {
-    @apply relative w-full px-4 lg:px-0;
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-image {
+    transform: scale(1.05);
   }
 
-  nav {
-    @apply flex flex-col md:flex-row px-4 lg:px-0 py-4 md:py-0 w-full md:justify-center;
-
-    .desktop {
-      @apply hidden md:flex fixed top-3 w-auto shadow-md shadow-background/50 backdrop-blur-lg rounded-lg m-auto bg-background/50 gap-4 items-center py-4 px-6 z-10;
-
-      button {
-        @apply cursor-pointer transition duration-300 ease-in-out hover:text-primary;
-      }
-    }
-
-    .mobile {
-      @apply relative z-100 w-full;
-
-      div {
-        @apply absolute top-0 left-0 w-full flex md:hidden flex-col gap-2 p-2 justify-start items-start rounded-md backdrop-blur-lg bg-background/50 transition-all duration-300 ease-in-out;
-      }
-    }
-
-    .open {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    }
-
-    .close {
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-
-    .menu {
-      @apply block md:hidden;
-
-      button {
-        @apply cursor-pointer;
-      }
-    }
+  .project-overlay {
+    transform: translateY(200%);
   }
 
-  .float-btn {
-    @apply fixed flex bottom-6 right-6 w-10 h-10 rounded-full backdrop-blur-lg bg-background/50 justify-center items-center p-2 shadow-md shadow-background/50 cursor-pointer;
-  }
-
-  #header {
-    @apply pt-5 md:pt-40 pb-20;
-
-    div {
-      @apply container m-auto;
-
-      div {
-        @apply w-full lg:w-3xl flex flex-col md:flex-row justify-center items-center gap-6;
-
-        img {
-          @apply rounded-full aspect-square w-[250px] h-[250px] shadow-lg shadow-background/50 object-cover;
-        }
-
-        div {
-          @apply w-full flex flex-col flex-wrap text-center md:text-start justify-center items-center md:items-start gap-2;
-
-          div {
-            @apply gap-0;
-          }
-        }
-      }
-    }
-
-    .social {
-      @apply flex flex-row items-center justify-center md:justify-start gap-4;
-    }
-  }
-
-  #experience {
-    @apply py-5 md:py-10;
-
-    div {
-      @apply container m-auto;
-
-      div {
-        @apply w-full lg:w-3xl;
-      }
-    }
-
-    .timeline {
-      @apply border-l border-l-placeholder;
-    }
-
-    .card {
-      @apply py-3 px-4 relative;
-    }
-
-    .date {
-      @apply text-sm;
-    }
-  }
-
-  #projects {
-    @apply py-5 md:py-10;
-
-    div {
-      @apply container m-auto;
-
-      div {
-        @apply w-full lg:w-3xl;
-      }
-    }
-  }
-
-  #about {
-    @apply py-5 md:py-10;
-
-    div {
-      @apply container m-auto;
-
-      div {
-        @apply w-full lg:w-3xl;
-      }
-    }
-  }
-
-  footer {
-    @apply py-5 md:py-10 px-4 lg:px-0;
-
-    div {
-      @apply container m-auto;
-
-      div {
-        @apply w-full lg:w-3xl flex flex-col lg:flex-row items-center justify-between gap-4;
-      }
-    }
-  }
-
-  #contact {
-    @apply flex flex-col items-start w-full lg:w-xl gap-0;
-  }
-
-  #network {
-    @apply flex flex-col py-4 gap-0;
-
-    div {
-      @apply w-auto flex flex-row gap-2;
-
-      a {
-        @apply cursor-pointer transition duration-300 ease-in-out hover:text-primary;
-      }
-    }
-  }
-
-  #skills {
-    @apply pt-5 md:pt-40 pb-10;
-
-    div {
-      @apply container m-auto;
-
-      div {
-        @apply w-full lg:w-3xl;
-
-        h3 {
-          @apply mb-0;
-        }
-
-        p {
-          @apply mb-4;
-        }
-
-        .skill-options {
-          @apply flex w-full gap-3 flex-wrap justify-start;
-
-          button {
-            @apply text-xl cursor-pointer;
-          }
-        }
-      }
-    }
-  }
-
-  #allProjects {
-    @apply pt-5 md:py-10;
-
-    div {
-      @apply container m-auto;
-
-      div {
-        @apply w-full lg:w-3xl;
-      }
-    }
+  .project-card:hover .project-overlay {
+    transform: translateY(0);
   }
 }

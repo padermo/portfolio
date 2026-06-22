@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { useAlert } from "@/context/AlertContext";
 import type { Alerts, Inputs } from "./contact.types";
+import Heading from "@/components/UI/Heading";
 
 interface FormInputs {
   email: string;
@@ -51,8 +52,8 @@ export const ContactClient = ({ title, inputs, alerts, button }: Props) => {
   });
 
   return (
-    <div id="contact">
-      <h3>{title}</h3>
+    <div id="contact" className="flex flex-col items-start w-full flex-1 gap-0">
+      <Heading as="h3" text={title} />
       <form onSubmit={onSubmit} className="flex flex-col gap-3 w-full">
         <Controller
           name="email"

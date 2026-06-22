@@ -1,31 +1,38 @@
-import { useTranslations } from "next-intl";
+import Heading from "@/components/UI/Heading";
+import Paragraph from "@/components/UI/Paragraph";
 
-interface SkillsProps {
+export interface SkillsData {
+  title: string;
+  paragraph: string;
+  skills: string[];
+}
+
+interface SkillsProps extends SkillsData {
   selectedSkill: string[];
   handleSkill: (skill: string) => void;
 }
 
-export const Skills = ({ selectedSkill, handleSkill }: SkillsProps) => {
-  const t = useTranslations("projects.skills");
-  const skills: string[] = t.raw("skills");
+export const Skills = ({ title, paragraph, skills, selectedSkill, handleSkill }: SkillsProps) => {
 
   return (
-    <article id="skills">
-      <div>
+    <article className="pb-10">
+      <div className="w-full lg:w-3xl mx-auto">
         <div>
-          <h3>{t("title")}</h3>
-          <p>{t("paragraph")}</p>
-          <div className="skill-options">
+          <div className="mb-6">
+            <Heading as="h3" text={title} />
+            <Paragraph text={paragraph} />
+          </div>
+          <div className="flex w-full gap-3 flex-wrap justify-start">
             {skills.map((skill: string) => (
               <button
                 key={skill}
                 aria-label={skill}
                 type="button"
-                className={
-                  selectedSkill.includes(skill)
+                className={`text-xl cursor-pointer
+                  ${selectedSkill.includes(skill)
                     ? "text-primary"
                     : "text-foreground"
-                }
+                  }`}
                 onClick={() => handleSkill(skill)}
               >
                 {skill}

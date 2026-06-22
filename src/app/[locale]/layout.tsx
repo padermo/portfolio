@@ -7,7 +7,6 @@ import FloatBtn from "@/components/FloatBtn";
 import "./globals.css";
 import { AlertProvider } from "@/context/AlertContext";
 import SmoothScroll from "@/components/SmoothScroll";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const poppins = Poppins({
@@ -28,6 +27,9 @@ export const metadata: Metadata = {
     "Fabio Estevez es un desarrollador web y móvil apasionado, especializado en React, Next.js y tecnologías frontend modernas. Explora sus proyectos, habilidades y experiencia creando aplicaciones responsivas y fáciles de usar.",
   keywords:
     "Fabio Estevez, Web Developer, Mobile Developer, React, Next.js, Frontend Developer, JavaScript, TypeScript, Portfolio, Responsive Web Design, Software Engineer",
+  appleWebApp: {
+    title: "Fabio Estevez Developer"
+  }
 };
 
 export default async function RootLayout({
@@ -50,10 +52,7 @@ export default async function RootLayout({
       >
         <AlertProvider>
           <NextIntlClientProvider>
-            <Navbar />
-            <main>
-              {children}
-            </main>
+            {children}
             <Footer />
             <FloatBtn />
             <SmoothScroll />

@@ -1,3 +1,5 @@
+import Heading from "@/components/UI/Heading";
+import Paragraph from "@/components/UI/Paragraph";
 import { useTranslations } from "next-intl";
 
 interface Data {
@@ -10,15 +12,13 @@ export const About = () => {
   const paragraphs: Data[] = t.raw("paragraph");
 
   return (
-    <article id="about">
-      <div>
+    <article id="about" className="py-5 md:py-10">
+      <div className="w-full lg:w-3xl mx-auto">
         <div>
-          <h3>{t("title")}</h3>
+          <Heading as="h3" text={t("title")} />
           <div>
             {paragraphs.map(({ id, text }) => (
-              <p key={id} className="mb-2">
-                {text}
-              </p>
+              <Paragraph key={id} text={text} className="mb-2" />
             ))}
           </div>
         </div>
