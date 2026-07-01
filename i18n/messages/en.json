@@ -1,0 +1,140 @@
+{
+  "navbar": {
+    "home": {
+      "experience": "Experiencia",
+      "about": "Sobre mí",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "projects": {
+      "home": "Back to home"
+    }
+  },
+  "hero": {
+    "title": "I'm Fabio Estevez",
+    "subtitle": "Frontend developer focused on scalable, high performance web products",
+    "paragraph": "+3 years of experience working on real world projects"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "jobs": {
+      "sira": {
+        "role": "Desarrollador Frontend – Sira Agency",
+        "paragraphs": [
+          "Implementación de sitios web modernos y responsivos para clientes de distintos sectores.",
+          "Optimización SEO y rendimiento para mejorar la experiencia del usuario."
+        ]
+      },
+      "printec": {
+        "role": "Desarrollador Frontend – Importaciones Printec",
+        "paragraphs": [
+          "Desarrollo de una app móvil para sistematizar operaciones internas.",
+          "Diseñé y estructuré la interfaz completa del cliente."
+        ]
+      },
+      "blacklab": {
+        "role": "Desarrollador Frontend – Blacklab Agency",
+        "paragraphs": [
+          "Participación en la creación del portal web de un sanatorio en Argentina.",
+          "Implementación de internacionalización, formularios y optimización de recursos visuales."
+        ]
+      },
+      "half": {
+        "role": "Desarrollador Frontend – Half App",
+        "paragraphs": [
+          "Contribuí en la creación de módulos clave para una app de restaurantes.",
+          "Desarrollo de componentes, rutas y gestión de estados globales."
+        ]
+      }
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "paragraphs": [
+      "Soy Fabio Andrés, desarrollador frontend con foco en crear soluciones centradas en el usuario.",
+      "Mi camino con el código comenzó a los 16 años y tomó una ruta poco convencional a través del soporte técnico y la creación de contenido para YouTube. Esa experiencia amplió mi perspectiva y fortaleció mi capacidad para entender problemas reales y comunicar ideas con claridad.",
+      "Hoy aplico todo ese aprendizaje en el desarrollo de software funcional e intuitivo, escribiendo código limpio, eficiente y orientado a resolver necesidades reales de las personas."
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "more": "Ver más proyectos.",
+    "items": {
+      "sanatorio": {
+        "title": "Sanatorio Colegiales",
+        "paragraph": "Sitio institucional con rutas dinámicas e internacionalización, optimizado para rendimiento y velocidad."
+      },
+      "centroMedico": {
+        "title": "Centro Médico - Sanatorio Colegiales",
+        "paragraph": "Web institucional optimizada, con foco en performance, velocidad de carga y fidelidad visual."
+      },
+      "creativeTools": {
+        "title": "Creative Tools",
+        "paragraph": "Plataforma web para descubrir y gestionar recursos creativos, con filtros avanzados y sistema de favoritos."
+      },
+      "printec": {
+        "title": "Importaciones Printec",
+        "paragraph": "Aplicación móvil para la gestión interna de clientes, contratos y facturación automatizada."
+      },
+      "analiaPuentes": {
+        "title": "Analia Puentes",
+        "paragraph": "Sitio web presentacional diseñado desde Figma, optimizado para rendimiento y posicionamiento profesional."
+      },
+      "regionario": {
+        "title": "Regionario",
+        "paragraph": "Web presentacional para bodega, con animaciones parallax y navegación fluida enfocada en storytelling."
+      },
+      "bristol": {
+        "title": "Bristol Medicine",
+        "paragraph": "Sitio institucional desarrollado a partir de Figma, con formularios avanzados y optimización de rendimiento."
+      },
+      "setpro": {
+        "title": "SetPro Landing",
+        "paragraph": "Landing page para aplicación móvil de pádel, optimizada para SEO, rendimiento y experiencia visual."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "inputs": {
+      "email": {
+        "placeholder": "Correo Electrónico",
+        "errors": {
+          "required": "El correo electrónico es obligatorio.",
+          "invalid": "Ingresa un correo electrónico válido."
+        }
+      },
+      "subject": {
+        "placeholder": "Asunto",
+        "errors": {
+          "required": "El asunto es obligatorio."
+        }
+      },
+      "message": {
+        "placeholder": "Mensaje",
+        "errors": {
+          "required": "El mensaje es obligatorio."
+        }
+      }
+    },
+    "button": {
+      "send": "Enviar",
+      "sending": "Enviando..."
+    },
+    "alerts": {
+      "success": "Correo enviado satisfactoriamente.",
+      "warning": "Se ha producido un error. Por favor intenta nuevamente."
+    }
+  },
+  "social": {
+    "title": "Redes Sociales",
+    "aria": {
+      "github": "Visita mi perfil de Github",
+      "linkedin": "Visita mi perfil de LinkedIn"
+    },
+    "texts": {
+      "email": "Copiar email",
+      "cv": "Ver mi CV"
+    }
+  }
+}

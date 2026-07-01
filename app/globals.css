@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #111;
+  --foreground: #fff;
+  --primary: #cfb53b;
+  --primary-hover: #e7cd59;
+  --primary-active: #b49d33;
+  --placeholder: #d9d9d9;
+  --dark-3: #333;
+  --dark-2: #222;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+  --color-placeholder: var(--placeholder);
+  --color-dark-3: var(--dark-3);
+  --color-dark-2: var(--dark-2);
+  --font-poppins: var(--font-poppins);
+  --font-montserrat: var(--font-montserrat);
+}
+
+html {
+  height: auto;
+  background-image:
+    radial-gradient(circle at top, #666666 0%, #333333 25%, transparent 100%),
+    linear-gradient(#222222, #222222);
+}
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-image {
+    transform: scale(1.05);
+  }
+
+  .project-overlay {
+    transform: translateY(200%);
+  }
+
+  .project-card:hover .project-overlay {
+    transform: translateY(0);
+  }
+}
