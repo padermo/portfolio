@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils/cn";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
-import LenisProvider from "@/providers/LenisProvider";
 import Footer from "@/features/footer/Footer";
 import { AlertProvider } from "@/providers/AlertProvider";
 
@@ -56,7 +55,6 @@ export default async function LocaleLayout({
       <body className="min-h-screen">
         <AlertProvider>
           <NextIntlClientProvider>
-            <LenisProvider />
             {children}
             <Footer />
           </NextIntlClientProvider>
